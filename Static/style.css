@@ -35,3 +35,53 @@ html{
 /*//////////////////////////////////////////////////////////////////////*/
 /*-----------------SECTION HEADER-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
+.header{
+  position: relative;
+  background: linear-gradient(to top right,rgba(159, 4, 248, 0.445),rgba(2, 8, 95, 0.603)),url("/Static/Images/headerBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  height:95vh;
+}
+/*NAVBAr*/
+.navMenu{
+  background-color: #7641F1;
+
+}
+.navMenu ul{
+  text-align: center;
+  padding:10px 10px;
+  list-style: none;
+}
+.navMenu ul li{
+  display: inline-block;
+  margin:0 14px 0 14px;
+}
+.navMenu ul li a:link,
+.navMenu ul li a:visited{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  font-size: 105%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s,color 0.3s;
+}
+.navMenu ul li a:hover,
+.navMenu ul li a:active {
+  color: #b49ee9;
+  border-bottom: 2px solid #fff;
+}
+/*MAIN HEADING*/
+.headerHeading{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.headerHeading h1{
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 320%;
+  font-weight: 300;
+}
