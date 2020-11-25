@@ -107,4 +107,101 @@ function nrzCanvasGenerator(dataArray) {
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZI-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
-
+function nrzIencoder(arr){
+  let nrzI = [];
+  if(arr[0]==1){
+    nrzI[0] = 1;
+  }else{
+    nrzI[0] = -1;
+  }
+  let currState = nrzI[0];
+  for(let i=1;i<=arr.length;i++){
+    if(arr[i]==0){
+      nrzI[i] = currState;
+    }else{
+      if(currState==-1){
+        currState = 1;
+      }else{
+        currState = -1;
+      }
+      nrzI[i] = currState;
+    }
+  }
+  return nrzI; 
+}
+function nrzIRandomGen() {
+  let arr = randomBinaryArrayGen();
+  nrzCanvasGenerator(arr);
+  let input = document.getElementById("nrzIInputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  console.log(arr);
+  let encodedSignal = nrzIencoder(arr);
+  nrzICanvasGenerator(encodedSignal,arr);
+}
+var countNrzI = 0;
+function nrzICanvasGenerator(dataArray,labelArray) {
+  if (countNrzI > 0) {
+    document.getElementById("nrzIChart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "nrzIChart");
+  document.getElementById("putNrzICanvas").appendChild(canvas);
+  var ctx = document.getElementById("nrzIChart").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: 16,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: 16,
+              labelOffset: 40,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countNrzI++;
+}
