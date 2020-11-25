@@ -120,6 +120,20 @@ html{
 .nrzRandomInput {
   text-align: center;
 }
+.nrzRandomHeading h3{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+.nrzRandomHeading h3:after {
+  margin:10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
 
 .nrzRiForm {
   display: inline-block;
@@ -142,13 +156,13 @@ html{
 .nrzRiButton {
   vertical-align: middle;
   display: inline-block;
-  transform: translate(-3.5%, 0);
+  transform: translate(-2%, 0);
 }
 
 .nrzRiButton a:link,
 .nrzRiButton a:visited {
   display: inline-block;
-  width:250px;
+  width:150px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: rgb(14, 13, 13);
@@ -166,6 +180,22 @@ html{
 
 .nrzCustomInput {
   text-align: center;
+}
+
+.nrzCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.nrzCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
 }
 
 .nrzCiForm {
@@ -189,13 +219,13 @@ html{
 .nrzCiButton {
   vertical-align: middle;
   display: inline-block;
-  transform: translate(-4%, 0);
+  transform: translate(-2%, 0);
 }
 
 .nrzCiButton a:link,
 .nrzCiButton a:visited {
   display: inline-block;
-  width:250px;
+  width:150px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: rgb(14, 13, 13);
@@ -250,8 +280,22 @@ html{
   margin:40px auto;
 }
 .nrzIRandomInput{
-  display: inline-block;
-  float:left;
+  text-align: center;
+}
+.nrzIRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.nrzIRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
 }
 .nrzIRiForm {
   display: inline-block;
@@ -260,7 +304,6 @@ html{
   vertical-align: middle;
   width: 100%;
   padding: 13px 20px 13px 20px;
-  margin-right: 100px;
   font-size: 80%;
   text-transform: uppercase;
   border: 2px solid#af96e7;
@@ -276,6 +319,8 @@ html{
 }
 .nrzIRiButton a:link,
 .nrzIRiButton a:visited {
+  display: inline-block;
+  width:150px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: rgb(14, 13, 13);
@@ -291,8 +336,22 @@ html{
 }
 
 .nrzICustomInput{
-  display: inline-block;
-  float:right;
+  text-align: center;
+}
+.nrzICustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.nrzICustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
 }
 .nrzICiForm {
   display: inline-block;
@@ -301,7 +360,6 @@ html{
   vertical-align: middle;
   width: 100%;
   padding: 13px 20px 13px 20px;
-  margin-right: 100px;
   font-size: 80%;
   text-transform: uppercase;
   border: 2px solid#af96e7;
@@ -313,10 +371,12 @@ html{
 .nrzICiButton {
   vertical-align: middle;
   display: inline-block;
-  transform: translate(-4%, 0);
+  transform: translate(-2%, 0);
 }
 .nrzICiButton a:link,
 .nrzICiButton a:visited {
+  display: inline-block;
+  width:150px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: rgb(14, 13, 13);
