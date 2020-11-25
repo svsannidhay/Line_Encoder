@@ -131,7 +131,6 @@ function nrzIencoder(arr){
 }
 function nrzIRandomGen() {
   let arr = randomBinaryArrayGen();
-  nrzCanvasGenerator(arr);
   let input = document.getElementById("nrzIInputCons0");
   let cons0 = input.value;
   for(let i=0;i<cons0;i++){
@@ -141,6 +140,15 @@ function nrzIRandomGen() {
   let encodedSignal = nrzIencoder(arr);
   nrzICanvasGenerator(encodedSignal,arr);
 }
+
+function nrzICustomGen(){
+  let input = document.getElementById("nrzIInputDs");
+  let arr = parserInt(input.value);
+  console.log(arr);
+  let encodedSignal = nrzIencoder(arr);
+  nrzICanvasGenerator(encodedSignal,arr);
+}
+
 var countNrzI = 0;
 function nrzICanvasGenerator(dataArray,labelArray) {
   if (countNrzI > 0) {
