@@ -25,17 +25,22 @@ function parserInt(string){
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
-function sendNrz() {
-  let input = document.getElementById("inputNrz");
+function nrzCustomGen() {
+  let input = document.getElementById("nrzInputDs");
   let string = input.value;
-  if(validate(string)){
+  if (validate(string)) {
     nrzCanvasGenerator(parserInt(string));
-  }else{
+  } else {
     alert("Please Enter a valid digital signal");
   }
 }
 function nrzRandomGen(){
   let arr = randomBinaryArrayGen();
+  let input = document.getElementById("nrzInputCons0");
+  let cons0 = input.value;
+  for (let i = 0; i < cons0; i++) {
+    arr[i] = 0;
+  }
   nrzCanvasGenerator(arr);
 }
 var countNrz = 0;
@@ -143,10 +148,15 @@ function nrzIRandomGen() {
 
 function nrzICustomGen(){
   let input = document.getElementById("nrzIInputDs");
-  let arr = parserInt(input.value);
-  console.log(arr);
-  let encodedSignal = nrzIencoder(arr);
-  nrzICanvasGenerator(encodedSignal,arr);
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    console.log(arr);
+    let encodedSignal = nrzIencoder(arr);
+    nrzICanvasGenerator(encodedSignal, arr);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
 }
 
 var countNrzI = 0;

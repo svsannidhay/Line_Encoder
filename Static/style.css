@@ -113,25 +113,100 @@ html{
   width:1200px;
   background-color: #b49ee9;
 }
-.nrzInput{
-  text-align: center;
-  margin:40px auto;
+.nrzInput {
+  margin: 40px auto;
 }
-.nrzRandomButton{
-  margin-top: 10px;
-  float:left;
+
+.nrzRandomInput {
+  display: inline-block;
+  float: left;
 }
-.nrzRandomButton a:link,
-.nrzRandomButton a:visited{
-  padding:10px 20px 10px 20px;
+
+.nrzRiForm {
+  display: inline-block;
+}
+
+#nrzInputCons0 {
+  vertical-align: middle;
+  width: 100%;
+  padding: 13px 20px 13px 20px;
+  margin-right: 100px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#nrzInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.nrzRiButton {
+  vertical-align: middle;
+  display: inline-block;
+  transform: translate(-2%, 0);
+}
+
+.nrzRiButton a:link,
+.nrzRiButton a:visited {
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
-  color:rgb(14, 13, 13);
+  color: rgb(14, 13, 13);
   border: 2px solid#af96e7;
   background-color: #c9b5f7;
-  transition: border 0.3s,background-color 0.3s;
+  transition: border 0.3s,
+    background-color 0.3s;
 }
-.nrzRandomButton a:hover,
-.nrzRandomButton a:active {
+
+.nrzRiButton a:hover,
+.nrzRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.nrzCustomInput {
+  display: inline-block;
+  float: right;
+}
+
+.nrzCiForm {
+  display: inline-block;
+}
+
+#nrzInputDs {
+  vertical-align: middle;
+  width: 100%;
+  padding: 13px 20px 13px 20px;
+  margin-right: 100px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#nrzInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.nrzCiButton {
+  vertical-align: middle;
+  display: inline-block;
+  transform: translate(-4%, 0);
+}
+
+.nrzCiButton a:link,
+.nrzCiButton a:visited {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.nrzCiButton a:hover,
+.nrzCiButton a:active {
   border: 2px solid #4A10D1;
   background-color: #b49ee9;
 }
@@ -145,45 +220,7 @@ html{
   width:1000px !important;
   height:400px !important;
 }
-.nrzForm{
-  float: right;
-}
-#formNrz{
-  display: inline-block;
-}
-#inputNrz{
-  vertical-align: middle;
-  width: 100%;
-  padding: 12px 20px 11px 20px;
-  margin-right:200px;
-  font-size:90%;
-  text-transform: uppercase;
-  border: 2px solid#af96e7;
-}
-#inputNrz:hover{
-  border: 2px solid #4A10D1;
-  background-color: #ebe3fd;
-}
-.nrzFormButton {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translate(-10%,0);
-}
-.nrzFormButton a:link,
-.nrzFormButton a:visited{
-  padding:10px 20px 10px 20px;
-  text-decoration: none;
-  color:rgb(14, 13, 13);
-  border: 2px solid#af96e7;
-  background-color: #c9b5f7;
-  transition: border 0.3s,
-  background-color 0.3s;
-}
-.nrzFormButton a:hover,
-.nrzFormButton a:active{
-  border: 2px solid #4A10D1;
-  background-color: #b49ee9;
-}
+
 
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZI-------------------------------------- */
