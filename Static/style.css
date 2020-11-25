@@ -118,8 +118,7 @@ html{
 }
 
 .nrzRandomInput {
-  display: inline-block;
-  float: left;
+  text-align: center;
 }
 
 .nrzRiForm {
@@ -130,7 +129,6 @@ html{
   vertical-align: middle;
   width: 100%;
   padding: 13px 20px 13px 20px;
-  margin-right: 100px;
   font-size: 80%;
   text-transform: uppercase;
   border: 2px solid#af96e7;
@@ -144,11 +142,13 @@ html{
 .nrzRiButton {
   vertical-align: middle;
   display: inline-block;
-  transform: translate(-2%, 0);
+  transform: translate(-3.5%, 0);
 }
 
 .nrzRiButton a:link,
 .nrzRiButton a:visited {
+  display: inline-block;
+  width:250px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: rgb(14, 13, 13);
@@ -165,8 +165,7 @@ html{
 }
 
 .nrzCustomInput {
-  display: inline-block;
-  float: right;
+  text-align: center;
 }
 
 .nrzCiForm {
@@ -177,7 +176,6 @@ html{
   vertical-align: middle;
   width: 100%;
   padding: 13px 20px 13px 20px;
-  margin-right: 100px;
   font-size: 80%;
   text-transform: uppercase;
   border: 2px solid#af96e7;
@@ -196,6 +194,8 @@ html{
 
 .nrzCiButton a:link,
 .nrzCiButton a:visited {
+  display: inline-block;
+  width:250px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: rgb(14, 13, 13);
@@ -215,9 +215,8 @@ html{
   padding:50px;
 }
 #nrzChart{
-  z-index: 99999;
   margin:auto;
-  width:1000px !important;
+  width: 90% !important;
   height:400px !important;
 }
 
@@ -340,6 +339,6 @@ html{
 #nrzIChart {
   z-index: 99999;
   margin: auto;
-  width: 1000px !important;
+  width: 90% !important;
   height: 400px !important;
 }
