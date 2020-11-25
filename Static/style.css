@@ -118,6 +118,7 @@ html{
   margin:40px auto;
 }
 .nrzRandomButton{
+  margin-top: 10px;
   float:left;
 }
 .nrzRandomButton a:link,
@@ -144,4 +145,42 @@ html{
   width:1000px !important;
   height:400px !important;
 }
-
+.nrzForm{
+  float: right;
+}
+#formNrz{
+  display: inline-block;
+}
+#inputNrz{
+  vertical-align: middle;
+  width: 100%;
+  padding: 12px 20px 11px 20px;
+  margin-right:200px;
+  font-size:90%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+#inputNrz:hover{
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+.nrzFormButton {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(-10%,0);
+}
+.nrzFormButton a:link,
+.nrzFormButton a:visited{
+  padding:10px 20px 10px 20px;
+  text-decoration: none;
+  color:rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+  background-color 0.3s;
+}
+.nrzFormButton a:hover,
+.nrzFormButton a:active{
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}

@@ -19,30 +19,30 @@ function validate(string) {
 function parserInt(string){
   let str = string.split('');
   let arr = str.map(Number);
+  arr[arr.length] = arr[arr.length-1];
   return arr;
 }
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
-function initNrz() {
-  document.getElementById("buttonSendNrz").addEventListener("click",sendNrz);
-}
-function sendNrz(event) {
-  event.preventDefault();
+function sendNrz() {
   let input = document.getElementById("inputNrz");
   let string = input.value;
-  console.log(validate(string));
-  nrzCanvasGenerator(parserInt(string));
+  if(validate(string)){
+    nrzCanvasGenerator(parserInt(string));
+  }else{
+    alert("Please Enter a valid digital signal");
+  }
 }
-document.addEventListener("DOMContentLoaded", initNrz);
-
-
 function nrzRandomGen(){
   let arr = randomBinaryArrayGen();
   nrzCanvasGenerator(arr);
 }
-
+var countNrz = 0;
 function nrzCanvasGenerator(dataArray) {
+  if(countNrz>0){
+    document.getElementById('nrzChart').remove();
+  }
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "nrzChart");
   document.getElementById("putNrzCanvas").appendChild(canvas);
@@ -100,5 +100,6 @@ function nrzCanvasGenerator(dataArray) {
       },
     },
   });
+  countNrz++;
 }
 
