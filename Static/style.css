@@ -139,6 +139,7 @@ html{
   padding:50px;
 }
 #nrzChart{
+  z-index: 99999;
   margin:auto;
   width:1000px !important;
   height:400px !important;

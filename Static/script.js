@@ -5,9 +5,7 @@ function randomBinaryArrayGen(){
   }
   return arr;
 }
-function validate() {
-  let input = document.getElementById("inputNrz");
-  let string = input.value;
+function validate(string) {
   let valid = true;
   for(let i=0;i<string.length;i++){
     if(string[i]=='0'||string[i]=='1'){
@@ -18,27 +16,36 @@ function validate() {
   }
   return valid;
 }
+function parserInt(string){
+  let str = string.split('');
+  let arr = str.map(Number);
+  return arr;
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
-function init() {
-  document.getElementById("buttonSendNrz").addEventListener("click", send);
+function initNrz() {
+  document.getElementById("buttonSendNrz").addEventListener("click",sendNrz);
 }
-
-function send(event) {
-  let text = document.getElementById("inputNrz");
-  console.log(text.value);
+function sendNrz(event) {
   event.preventDefault();
-  console.log(validate());
+  let input = document.getElementById("inputNrz");
+  let string = input.value;
+  console.log(validate(string));
+  nrzCanvasGenerator(parserInt(string));
 }
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", initNrz);
 
 
-function nrzCanvasGenerator() {
+function nrzRandomGen(){
+  let arr = randomBinaryArrayGen();
+  nrzCanvasGenerator(arr);
+}
+
+function nrzCanvasGenerator(dataArray) {
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "nrzChart");
   document.getElementById("putNrzCanvas").appendChild(canvas);
-  let dataArray = randomBinaryArrayGen();
   var ctx = document.getElementById("nrzChart").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "line",
