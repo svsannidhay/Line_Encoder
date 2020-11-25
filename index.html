@@ -96,7 +96,7 @@
             </form>
           </div>
           <div class="nrzIRiButton">
-            <a href="#" onclick="nrzIRandomGen();event.preventDefault();">Generate</a>
+            <a href="#" class = "js--wayPointNrzIButtons" onclick="nrzIRandomGen();event.preventDefault();">Generate</a>
           </div>
         </div> 
         <div class="nrzICustomInput col span-1-of-2">
@@ -112,15 +112,62 @@
             </form>
           </div>
           <div class="nrzICiButton">
-            <a href="#" onclick="nrzICustomGen();event.preventDefault();">Generate</a>
+            <a href="#" class = "js--wayPointNrzIButtons" onclick="nrzICustomGen();event.preventDefault();">Generate</a>
           </div>
         </div>
         <div class="clearfix"></div>
       </div>    
-      <div id="putNrzICanvas" class="row">
+      <div id="putNrzICanvas" class="row putNrzICanvasAddPadding">
       </div> 
     </section>
     
+    <section class="nrzL">
+        <div class="row nrzLHeading">
+        <h2>NRZ-L (non-return-to-zero-Level)</h2>
+      </div>
+      <div class="row nrzLInput">
+        <div class="nrzLRandomInput col span-1-of-2">
+          <div class="nrzLRandomHeading">
+            <h3>Generate random input</h3>
+          </div>
+          <div class="nrzLRiForm">
+            <form id="nrzLFormCons0" action="#" method="post">
+              <div class="nrzLFormBoxCons0" data-errormsg="Wrong format">
+                <label for="nrzLInputCons0"></label>
+                <input type="text" id="nrzLInputCons0" autofocus placeholder="No of consecutive zeros" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="nrzLRiButton">
+            <a href="#" onclick="nrzLRandomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div> 
+        <div class="nrzLCustomInput col span-1-of-2">
+          <div class="nrzLCustomHeading">
+            <h3>Enter Custom input</h3>
+          </div>
+          <div class="nrzLCiForm">
+            <form id="nrzLFormDs" action="#" method="post">
+              <div class="nrzLFormBoxDs" data-errormsg="Wrong format">
+                <label for="nrzLInputDs"></label>
+                <input type="text" id="nrzLInputDs" autofocus placeholder="Digital Signal" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="nrzLCiButton">
+            <a href="#" onclick="nrzLCustomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>    
+      <div id="putNrzLCanvas" class="row">
+      </div> 
+    </section>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <script src="Static/jQuery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="Static/script.js"></script>  
   </body>

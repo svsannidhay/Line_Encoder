@@ -94,7 +94,9 @@ html{
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 .nrz{
-  margin:50px 0 50px 0;
+  margin:50px 0 0 0;
+  padding-top:30px;
+  background-color: #f4f3f7;
 }
 .nrzHeading{
   text-align: center;
@@ -118,7 +120,11 @@ html{
 }
 
 .nrzRandomInput {
+  padding:30px;
   text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
 }
 .nrzRandomHeading h3{
   text-transform: uppercase;
@@ -180,7 +186,11 @@ html{
 }
 
 .nrzCustomInput {
+  padding:30px;
   text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
 }
 
 .nrzCustomHeading h3 {
@@ -244,22 +254,24 @@ html{
 }
 #putNrzCanvas{
   margin-top:50px;
-  padding:50px;
+  padding:30px;
 }
 #nrzChart{
   margin:auto;
   width: 90% !important;
   height:400px !important;
 }
-
-
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZI-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 .nrzI{
-  margin:50px 0 50px 0;
   padding:30px 0 30px 0;
-  background-color: #ece4fd;
+  background: linear-gradient(to top right, rgba(83, 2, 129, 0.397), rgba(2, 8, 95, 0.74)),
+  url("Images/headerBackground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 .nrzIHeading {
   text-align: center;
@@ -396,11 +408,195 @@ html{
 }
 
 #putNrzICanvas {
+  background: #fff;
   margin-top: 50px;
-  padding: 50px;
+
+}
+.putNrzICanvasAddPadding.addPadding {
+  padding: 30px;
 }
 
 #nrzIChart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION NRZL-------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.nrzL {
+  margin:0 0 50px 0;
+  padding-top:30px;
+  background-color: #f4f3f7;
+}
+
+.nrzLHeading {
+  text-align: center;
+}
+
+.nrzLHeading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.nrzLHeading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
+}
+
+.nrzLInput {
+  margin: 40px auto;
+}
+
+.nrzLRandomInput {
+  padding:30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.nrzLRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.nrzLRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.nrzLRiForm {
+  display: block;
+}
+
+#nrzLInputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#nrzLInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.nrzLRiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nrzLRiButton a:link,
+.nrzLRiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.nrzLRiButton a:hover,
+.nrzLRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.nrzLCustomInput {
+  padding:30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.nrzLCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.nrzLCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.nrzLCiForm {
+  display: block;
+}
+
+#nrzLInputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#nrzLInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.nrzLCiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nrzLCiButton a:link,
+.nrzLCiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.nrzLCiButton a:hover,
+.nrzLCiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putNrzLCanvas {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+#nrzLChart {
   margin: auto;
   width: 90% !important;
   height: 400px !important;

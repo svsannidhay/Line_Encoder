@@ -72,6 +72,9 @@ function nrzCanvasGenerator(dataArray) {
           radius: 0,
         },
       },
+      legend: {
+        display: false,
+      },
       responsive: true,
       scales: {
         yAxes: [
@@ -188,6 +191,9 @@ function nrzICanvasGenerator(dataArray,labelArray) {
           radius: 0,
         },
       },
+      legend: {
+        display: false,
+      },
       responsive: true,
       scales: {
         yAxes: [
@@ -222,4 +228,112 @@ function nrzICanvasGenerator(dataArray,labelArray) {
     },
   });
   countNrzI++;
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION NRZL-------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+function nrzLencoder(arr){
+  let nrzL = [];
+  for(let i=0;i<=arr.length;i++){
+    if(arr[i]==0){
+      nrzL[i] = -1
+    }else{
+      nrzL[i] = 1;
+    }
+  }
+  return nrzL; 
+}
+function nrzLRandomGen() {
+  let arr = randomBinaryArrayGen();
+  let input = document.getElementById("nrzLInputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  let encodedSignal = nrzLencoder(arr);
+  nrzLCanvasGenerator(encodedSignal,arr);
+}
+
+function nrzLCustomGen(){
+  let input = document.getElementById("nrzLInputDs");
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    let encodedSignal = nrzLencoder(arr);
+    nrzLCanvasGenerator(encodedSignal, arr);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
+}
+
+var countNrzL = 0;
+function nrzLCanvasGenerator(dataArray,labelArray) {
+  if (countNrzL > 0) {
+    document.getElementById("nrzLChart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "nrzLChart");
+  document.getElementById("putNrzLCanvas").appendChild(canvas);
+  var ctx = document.getElementById("nrzLChart").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      legend: {
+        display: false,
+      },
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: 16,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: 16,
+              labelOffset: 40,
+            },
+            gridLines: {
+              lineWidth: 1,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countNrzL++;
 }
