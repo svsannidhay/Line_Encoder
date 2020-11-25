@@ -37,7 +37,7 @@ html{
 /*//////////////////////////////////////////////////////////////////////*/
 .header{
   position: relative;
-  background: linear-gradient(to top right,rgba(159, 4, 248, 0.445),rgba(2, 8, 95, 0.603)),url("/Static/Images/headerBackground.jpg");
+  background: linear-gradient(to top right,rgba(159, 4, 248, 0.445),rgba(2, 8, 95, 0.603)),url("Images/headerBackground.jpg");
   background-position: center;
   background-size: cover;
   height:95vh;
@@ -49,7 +49,7 @@ html{
 .navMenu{
   background-color: #b49ee9;
 
-}
+} 
 .navMenu ul{
   text-align: center;
   padding:10px 10px;
