@@ -42,9 +42,12 @@ html{
   background-size: cover;
   height:95vh;
 }
+.header.clipIt{
+  clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+}
 /*NAVBAr*/
 .navMenu{
-  background-color: #7641F1;
+  background-color: #b49ee9;
 
 }
 .navMenu ul{
@@ -68,7 +71,7 @@ html{
 }
 .navMenu ul li a:hover,
 .navMenu ul li a:active {
-  color: #b49ee9;
+  color: #3500af;
   border-bottom: 2px solid #fff;
 }
 /*MAIN HEADING*/
@@ -85,3 +88,59 @@ html{
   font-size: 320%;
   font-weight: 300;
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION NRZ-------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.nrz{
+  margin:50px 0 50px 0;
+}
+.nrzHeading{
+  text-align: center;
+}
+.nrzHeading h2{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+.nrzHeading h2:after{
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height:2px;
+  width:1200px;
+  background-color: #b49ee9;
+}
+.nrzInput{
+  text-align: center;
+  margin:40px auto;
+}
+.nrzRandomButton{
+  float:left;
+}
+.nrzRandomButton a:link,
+.nrzRandomButton a:visited{
+  padding:10px 20px 10px 20px;
+  text-decoration: none;
+  color:rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,background-color 0.3s;
+}
+.nrzRandomButton a:hover,
+.nrzRandomButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+#putNrzCanvas{
+  margin-top:50px;
+  padding:50px;
+}
+#nrzChart{
+  margin:auto;
+  width:1000px !important;
+  height:400px !important;
+}
+
