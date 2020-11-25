@@ -60,6 +60,40 @@
       </div>  
     </section>
 
+    <section class="nrzI">
+      <div class="row nrzIHeading">
+        <h2>NRZ-I (non-return-to-zero-Invert)</h2>
+      </div>
+      <div class="row nrzIInput">
+        <div class="nrzIRandomInput">
+          <div class="nrzIRiForm">
+            <form id="nrzIFormCons0" action="#" method="post">
+              <div class="nrzIFormBoxCons0" data-errormsg="Wrong format">
+                <label for="nrzIInputCons0"></label>
+                <input type="text" id="nrzIInputCons0" autofocus placeholder="No of consecutive zeros" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="nrzIRiButton">
+            <a href="#" onclick="nrzIRandomGen();event.preventDefault();">Generate random input</a>
+          </div>
+        </div> 
+        <div class="nrzICustomInput">
+          <div class="nrzICiForm">
+            <form id="nrzIFormDs" action="#" method="post">
+              <div class="nrzIFormBoxDs" data-errormsg="Wrong format">
+                <label for="nrzIInputDs"></label>
+                <input type="text" id="nrzIInputDs" autofocus placeholder="Digital Signal" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="nrzICiButton">
+            <a href="#" onclick="nrzIRandomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div>
+      </div>      
+    </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="Static/script.js"></script>  
   </body>
