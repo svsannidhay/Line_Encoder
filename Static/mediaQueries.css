@@ -1,9 +1,51 @@
 /*//////////////////////////////////////////////////////////////////////*/
-/*-----------------BIG TABLETS TO LAPTOPS--------1024px to 1200px------*/
+/*-----------------BIG TABLETS TO LAPTOPS--------1024px to 1200px-------*/
 /*//////////////////////////////////////////////////////////////////////*/
 @media only screen and (max-width:1200px){
+  html{font-size: 18px;}
   .row{width:98%;}
-  .nrzHeading h2 {font-size: 210%;}
-  .nrzIHeading h2 {font-size: 210%;}
-  
+  .nrzHeading h2:after,
+  .nrzIHeading h2:after{
+    width:96%;
+    margin:10px auto;
+  }
+  .nrzRandomHeading h3:after,
+  .nrzCustomHeading h3:after,
+  .nrzICustomHeading h3:after,
+  .nrzIRandomHeading h3:after{
+    width:90%;
+  }
 } 
+/*//////////////////////////////////////////////////////////////////////*/
+/*----------SMALL TABLETS TO LARGE TABLETS -------768px to 1023px-------*/
+/*//////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width:1023px) {
+  html {font-size: 16px;}
+  #nrzIChart,
+  #nrzChart {
+    height:320px !important;
+  }
+}
+/*//////////////////////////////////////////////////////////////////////*/
+/*-----------------LARGE PHONES TO SMALL TABLETS ------- 481px to 767px-------*/
+/*//////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width:767px) {
+  html{font-size:14px;}
+  .col{width:100%;}
+  .col{
+    text-align: center;
+  }
+  .nrzRandomHeading h3:after,
+  .nrzCustomHeading h3:after,
+  .nrzICustomHeading h3:after,
+  .nrzIRandomHeading h3:after {
+    width: 60%;
+  }
+  .nrzCustomInput,
+  .nrzICustomInput {
+    margin-left:0;
+  }
+}
+/*//////////////////////////////////////////////////////////////////////*/
+/*-----------------SMALL PHONES TO LARGE PHONES -------0 to 480px-------*/
+/*//////////////////////////////////////////////////////////////////////*/
