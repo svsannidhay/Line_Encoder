@@ -1145,3 +1145,184 @@ html{
   width: 90% !important;
   height: 400px !important;
 }
+
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION AMI--------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.ami {
+  padding: 60px 0 30px 0;
+  background-color: #f4f3f7;
+}
+
+.amiInput {
+  margin: 40px auto;
+}
+
+.amiRandomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.amiRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.amiRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.amiRiForm {
+  display: block;
+}
+
+#amiInputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#amiInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.amiRiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.amiRiButton a:link,
+.amiRiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.amiRiButton a:hover,
+.amiRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.amiCustomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.amiCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.amiCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.amiCiForm {
+  display: block;
+}
+
+#amiInputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#amiInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.amiCiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.amiCiButton a:link,
+.amiCiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.amiCiButton a:hover,
+.amiCiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putAmiCanvas {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+#amiChart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
+
+.amiHeading {
+  text-align: center;
+}
+
+.amiHeading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.amiHeading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
+}
