@@ -963,3 +963,185 @@ html{
   width: 1200px;
   background-color: #b49ee9;
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*------------------SECTION DIFFERENTIAL MANCHESTER-------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.diffMan {
+  padding: 60px 0 30px 0;
+  background: linear-gradient(to top right, rgba(8, 8, 8, 0.699), rgba(13, 13, 14, 0.74)),
+    url("Images/headerBackground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.diffManHeading {
+  text-align: center;
+}
+
+.diffManHeading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.diffManHeading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
+}
+
+.diffManInput {
+  margin: 40px auto;
+}
+
+.diffManRandomInput {
+  text-align: center;
+}
+
+.diffManRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.diffManRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.diffManRiForm {
+  display: block;
+}
+
+#diffManInputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#diffManInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.diffManRiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.diffManRiButton a:link,
+.diffManRiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.diffManRiButton a:hover,
+.diffManRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.diffManCustomInput {
+  text-align: center;
+}
+
+.diffManCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.diffManCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.diffManCiForm {
+  display: block;
+}
+
+#diffManInputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#diffManInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.diffManCiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.diffManCiButton a:link,
+.diffManCiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.diffManCiButton a:hover,
+.diffManCiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putDiffManCanvas {
+  background: #fff;
+  margin-top: 50px;
+
+}
+
+.putDiffManCanvasAddPadding.addPadding {
+  padding: 30px;
+}
+
+#diffManChart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
