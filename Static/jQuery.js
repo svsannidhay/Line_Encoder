@@ -11,4 +11,7 @@ $(document).ready(function(){
     $(".js--wayPointDiffManButtons").click(function(){
         $(".putDiffManCanvasAddPadding").addClass("addPadding");
     });
+    $(".js--wayPointBezsButtons").click(function(){
+        $('.putBezsCanvasAddPadding').addClass("addPadding");
+    });
 });

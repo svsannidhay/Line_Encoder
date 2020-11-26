@@ -1326,3 +1326,185 @@ html{
   width: 1200px;
   background-color: #b49ee9;
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*------------------SECTION B8ZS-------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.bezs {
+  padding: 60px 0 30px 0;
+  background: linear-gradient(to top right, rgba(8, 8, 8, 0.699), rgba(13, 13, 14, 0.74)),
+    url("Images/headerBackground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.bezsHeading {
+  text-align: center;
+}
+
+.bezsHeading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.bezsHeading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
+}
+
+.bezsInput {
+  margin: 40px auto;
+}
+
+.bezsRandomInput {
+  text-align: center;
+}
+
+.bezsRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.bezsRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.bezsRiForm {
+  display: block;
+}
+
+#bezsInputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#bezsInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.bezsRiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.bezsRiButton a:link,
+.bezsRiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.bezsRiButton a:hover,
+.bezsRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.bezsCustomInput {
+  text-align: center;
+}
+
+.bezsCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.bezsCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.bezsCiForm {
+  display: block;
+}
+
+#bezsInputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#bezsInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.bezsCiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.bezsCiButton a:link,
+.bezsCiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.bezsCiButton a:hover,
+.bezsCiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putBezsCanvas {
+  background: #fff;
+  margin-top: 50px;
+
+}
+
+.putBezsCanvasAddPadding.addPadding {
+  padding: 30px;
+}
+
+#bezsChart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
