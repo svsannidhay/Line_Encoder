@@ -193,9 +193,9 @@ function nrzICanvasGenerator(dataArray,labelArray) {
     },
     options: {
       elements: {
-        point: {
-          radius: 0,
-        },
+        // point: {
+        //   radius: 0,
+        // },
       },
       legend: {
         display: false,
