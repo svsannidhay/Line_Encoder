@@ -1508,3 +1508,183 @@ html{
   width: 90% !important;
   height: 400px !important;
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION HDB3------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.hdb3 {
+  padding: 60px 0 30px 0;
+  background-color: #f4f3f7;
+}
+
+.hdb3Input {
+  margin: 40px auto;
+}
+
+.hdb3RandomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.hdb3RandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.hdb3RandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.hdb3RiForm {
+  display: block;
+}
+
+#hdb3InputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#hdb3InputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.hdb3RiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.hdb3RiButton a:link,
+.hdb3RiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.hdb3RiButton a:hover,
+.hdb3RiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.hdb3CustomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.hdb3CustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.hdb3CustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.hdb3CiForm {
+  display: block;
+}
+
+#hdb3InputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#hdb3InputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.hdb3CiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.hdb3CiButton a:link,
+.hdb3CiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.hdb3CiButton a:hover,
+.hdb3CiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putHdb3Canvas {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+#hdb3Chart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
+
+.hdb3Heading {
+  text-align: center;
+}
+
+.hdb3Heading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.hdb3Heading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
+}
