@@ -5,14 +5,20 @@
   html{font-size: 18px;}
   .row{width:98%;}
   .nrzHeading h2:after,
-  .nrzIHeading h2:after{
+  .nrzIHeading h2:after,
+  .nrzLHeading h2:after,
+  .rzHeading h2:after{
     width:96%;
     margin:10px auto;
   }
   .nrzRandomHeading h3:after,
   .nrzCustomHeading h3:after,
   .nrzICustomHeading h3:after,
-  .nrzIRandomHeading h3:after{
+  .nrzIRandomHeading h3:after,
+  .nrzLRandomHeading h3:after,
+  .nrzLCustomHeading h3:after,
+  .rzRandomHeading h3:after,
+  .rzCustomHeading h3:after{
     width:90%;
   }
 } 

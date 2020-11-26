@@ -365,6 +365,19 @@ function rzEncoder(arr){
   }
   return rz; 
 }
+function rzLabelArray(arr){
+  let labelArray = [];
+  let indexLA = 0;
+  let indexA = 0;
+  while (indexA < arr.length) {
+    if (indexLA % 2 == 0) {
+      labelArray[indexLA++] = arr[indexA++];
+    } else {
+      labelArray[indexLA++] = -1;
+    }
+  }
+  return labelArray;
+}
 function rzRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("rzInputCons0");
@@ -373,29 +386,19 @@ function rzRandomGen() {
     arr[i] = 0;
   }
   let encodedSignal = rzEncoder(arr);
-  console.log(arr);
-  console.log(encodedSignal);
-  let labelArray = [];
-  let indexLA = 0;
-  let indexA = 0;
-  while(indexA<arr.length){
-    if(indexLA%2==0){
-      labelArray[indexLA++] = arr[indexA++];
-    }else{
-      labelArray[indexLA++] = -1;
-    }
-  }
+  let labelArray = rzLabelArray(arr);
   console.log(labelArray);
   rzCanvasGenerator(encodedSignal,labelArray);
 }
 
 function nrzLCustomGen(){
-  let input = document.getElementById("nrzLInputDs");
+  let input = document.getElementById("rzInputDs");
   let string = input.value;
   if (validate(string)) {
     let arr = parserInt(string);
-    let encodedSignal = nrzLencoder(arr);
-    nrzLCanvasGenerator(encodedSignal, arr);
+    let encodedSignal = rzEncoder(arr);
+    let labelArray = rzLabelArray(arr);
+    rzCanvasGenerator(encodedSignal,labelArray);
   } else {
     alert("Please Enter a valid digital signal");
   }
