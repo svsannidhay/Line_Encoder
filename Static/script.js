@@ -43,7 +43,7 @@ function processStringForLps(s){
   let str = [];
   str[0] = "#";
   index  = 1;
-  for(let i=0;i<s.length;i++){
+  for(let i=0;i<s.length-1;i++){
     str[index++] = s[i];
     str[index++] = "#";
   }
@@ -52,9 +52,9 @@ function processStringForLps(s){
 }
 function LPS_ManachersAlgo(s){
   s = s.join('');
-  console.log(s);
   let p = [];
   str = processStringForLps(s);
+  console.log(str);
   for(let i=0;i<str.length+1;i++){
     p[i] = 0;
   }
@@ -383,7 +383,25 @@ function nrzLCustomGen(){
 
 var countNrzL = 0;
 function nrzLCanvasGenerator(dataArray,labelArray) {
+
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row nrzLDivLPS");
+  divLPS.setAttribute("id", "nrzLDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "nrzLLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "nrzLLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(labelArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putNrzLCanvas").appendChild(divLPS);
+
+
   if (countNrzL > 0) {
+    document.getElementById("nrzLDivLPS").remove();
     document.getElementById("nrzLChart").remove();
   }
   let canvas = document.createElement("canvas");
@@ -496,8 +514,7 @@ function rzRandomGen() {
   }
   let encodedSignal = rzEncoder(arr);
   let labelArray = rzLabelArray(arr);
-  console.log(labelArray);
-  rzCanvasGenerator(encodedSignal,labelArray);
+  rzCanvasGenerator(encodedSignal,labelArray,arr);
 }
 
 function rzCustomGen(){
@@ -507,15 +524,33 @@ function rzCustomGen(){
     let arr = parserInt(string);
     let encodedSignal = rzEncoder(arr);
     let labelArray = rzLabelArray(arr);
-    rzCanvasGenerator(encodedSignal,labelArray);
+    rzCanvasGenerator(encodedSignal,labelArray,arr);
   } else {
     alert("Please Enter a valid digital signal");
   }
 }
 
 var countrz = 0;
-function rzCanvasGenerator(dataArray,labelArray) {
+function rzCanvasGenerator(dataArray,labelArray,arr) {
+
+
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row rzDivLPS");
+  divLPS.setAttribute("id", "rzDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "rzLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "rzLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(arr);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putRzCanvas").appendChild(divLPS);
+
   if (countrz > 0) {
+    document.getElementById("rzDivLPS").remove();
     document.getElementById("rzChart").remove();
   }
   let canvas = document.createElement("canvas");
@@ -523,7 +558,6 @@ function rzCanvasGenerator(dataArray,labelArray) {
   document.getElementById("putRzCanvas").appendChild(canvas);
   var ctx = document.getElementById("rzChart").getContext("2d");
   let canvasWidth = document.getElementById('rzChart').offsetWidth;
-  console.log(canvasWidth);
   let noOfdataelements = labelArray.length/2;
   var myChart = new Chart(ctx, {
     type: "line",
@@ -637,7 +671,7 @@ function manRandomGen() {
   let encodedSignal = manEncoder(arr);
   let labelArray = manLabelArray(arr);
   console.log(labelArray);
-  manCanvasGenerator(encodedSignal,labelArray);
+  manCanvasGenerator(encodedSignal,labelArray,arr);
 }
 
 function manCustomGen(){
@@ -647,15 +681,33 @@ function manCustomGen(){
     let arr = parserInt(string);
     let encodedSignal = manEncoder(arr);
     let labelArray = manLabelArray(arr);
-    manCanvasGenerator(encodedSignal,labelArray);
+    manCanvasGenerator(encodedSignal,labelArray,arr);
   } else {
     alert("Please Enter a valid digital signal");
   }
 }
 
 var countMan = 0;
-function manCanvasGenerator(dataArray,labelArray) {
+function manCanvasGenerator(dataArray,labelArray,arr) {
+
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row manDivLPS");
+  divLPS.setAttribute("id", "manDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "manLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "manLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(arr);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putManCanvas").appendChild(divLPS);
+
+
   if (countMan > 0) {
+    document.getElementById("manDivLPS").remove();
     document.getElementById("manChart").remove();
   }
   let canvas = document.createElement("canvas");
@@ -663,7 +715,6 @@ function manCanvasGenerator(dataArray,labelArray) {
   document.getElementById("putManCanvas").appendChild(canvas);
   var ctx = document.getElementById("manChart").getContext("2d");
   let canvasWidth = document.getElementById('manChart').offsetWidth;
-  console.log(canvasWidth);
   let noOfdataelements = labelArray.length/2;
   var myChart = new Chart(ctx, {
     type: "line",
@@ -792,7 +843,7 @@ function diffManRandomGen() {
   }
   let encodedSignal = diffManEncoder(arr);
   let labelArray = diffManLabelArray(arr);
-  diffManCanvasGenerator(encodedSignal,labelArray);
+  diffManCanvasGenerator(encodedSignal,labelArray,arr);
 }
 
 function diffManCustomGen(){
@@ -802,15 +853,32 @@ function diffManCustomGen(){
     let arr = parserInt(string);
     let encodedSignal = diffManEncoder(arr);
     let labelArray = diffManLabelArray(arr);
-    diffManCanvasGenerator(encodedSignal,labelArray);
+    diffManCanvasGenerator(encodedSignal,labelArray,arr);
   } else {
     alert("Please Enter a valid digital signal");
   }
 }
 
 var countDiffMan = 0;
-function diffManCanvasGenerator(dataArray,labelArray) {
+function diffManCanvasGenerator(dataArray,labelArray,arr) {
+
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row diffManDivLPS");
+  divLPS.setAttribute("id", "diffManDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "diffManLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "diffManLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(arr);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putDiffManCanvas").appendChild(divLPS);
+
   if (countDiffMan > 0) {
+    document.getElementById("diffManDivLPS").remove();
     document.getElementById("diffManChart").remove();
   }
   let canvas = document.createElement("canvas");

@@ -647,6 +647,30 @@ html{
   height: 400px !important;
 }
 
+.nrzLDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
+
+.nrzLLPSHeading {
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#nrzLLPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION RZ--------------------------------------- */
@@ -829,7 +853,31 @@ html{
   height: 400px !important;
 }
 
+.rzDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
 
+.rzLPSHeading {
+  color: black;
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#rzLPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION MAN--------------------------------------- */
@@ -1010,6 +1058,30 @@ html{
   background-color: #b49ee9;
 }
 
+.manDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
+
+.manLPSHeading {
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#manLPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 
 /*//////////////////////////////////////////////////////////////////////*/
 /*------------------SECTION DIFFERENTIAL MANCHESTER-------------------- */
@@ -1192,6 +1264,31 @@ html{
   height: 400px !important;
 }
 
+.diffManDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
+
+.diffManLPSHeading {
+  color: black;
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#diffManLPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 
 
 /*//////////////////////////////////////////////////////////////////////*/
