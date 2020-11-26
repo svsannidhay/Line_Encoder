@@ -266,7 +266,7 @@ html{
 /*//////////////////////////////////////////////////////////////////////*/
 .nrzI{
   padding:30px 0 30px 0;
-  background: linear-gradient(to top right, rgba(83, 2, 129, 0.397), rgba(2, 8, 95, 0.74)),
+  background: linear-gradient(to top right, rgba(8, 8, 8, 0.699), rgba(13, 13, 14, 0.74)),
   url("Images/headerBackground.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -423,7 +423,7 @@ html{
 }
 
 /*//////////////////////////////////////////////////////////////////////*/
-/*--------------------SECTION NRZL-------------------------------------- */
+/*--------------------SECTION NRZL------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 .nrzL {
   margin:0 0 50px 0;
@@ -600,4 +600,184 @@ html{
   margin: auto;
   width: 90% !important;
   height: 400px !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION RZ--------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.rz {
+  padding: 30px 0 30px 0;
+}  
+
+
+.rzInput {
+  margin: 40px auto;
+}
+
+.rzRandomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.rzRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.rzRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.rzRiForm {
+  display: block;
+}
+
+#rzInputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#rzInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.rzRiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.rzRiButton a:link,
+.rzRiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.rzRiButton a:hover,
+.rzRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.rzCustomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.rzCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.rzCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.rzCiForm {
+  display: block;
+}
+
+#rzInputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#rzInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.rzCiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.rzCiButton a:link,
+.rzCiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.rzCiButton a:hover,
+.rzCiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putRzCanvas {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+#rzChart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
+
+.rzHeading {
+  text-align: center;
+}
+
+.rzHeading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.rzHeading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
 }

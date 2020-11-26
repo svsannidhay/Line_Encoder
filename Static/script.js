@@ -321,6 +321,13 @@ function nrzLCanvasGenerator(dataArray,labelArray) {
             ticks: {
               fontSize: 16,
               labelOffset: 40,
+              // callback: function(value, index, values) {
+              //   if (index % 2 === 0) {
+              //     return value;
+              //   } else {
+              //     return ' ';
+              //   }
+              // }  
             },
             gridLines: {
               lineWidth: 1,
