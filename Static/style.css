@@ -265,7 +265,7 @@ html{
 /*--------------------SECTION NRZI-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 .nrzI{
-  padding:30px 0 30px 0;
+  padding:60px 0 30px 0;
   background: linear-gradient(to top right, rgba(8, 8, 8, 0.699), rgba(13, 13, 14, 0.74)),
   url("Images/headerBackground.jpg");
   background-attachment: fixed;
@@ -426,8 +426,7 @@ html{
 /*--------------------SECTION NRZL------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 .nrzL {
-  margin:0 0 50px 0;
-  padding-top:30px;
+  padding-top:60px;
   background-color: #f4f3f7;
 }
 
@@ -607,20 +606,41 @@ html{
 /*--------------------SECTION RZ--------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 .rz {
-  padding: 30px 0 30px 0;
-}  
+  padding: 60px 0 30px 0;
+  background: linear-gradient(to top right, rgba(8, 8, 8, 0.699), rgba(13, 13, 14, 0.74)),
+    url("Images/headerBackground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 
+.rzHeading {
+  text-align: center;
+}
+
+.rzHeading h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.rzHeading h2:after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 1200px;
+  background-color: #b49ee9;
+}
 
 .rzInput {
   margin: 40px auto;
 }
 
 .rzRandomInput {
-  padding: 30px;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px rgb(206, 206, 206);
 }
 
 .rzRandomHeading h3 {
@@ -684,11 +704,7 @@ html{
 }
 
 .rzCustomInput {
-  padding: 30px;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px rgb(206, 206, 206);
 }
 
 .rzCustomHeading h3 {
@@ -752,7 +768,12 @@ html{
 }
 
 #putRzCanvas {
+  background: #fff;
   margin-top: 50px;
+
+}
+
+.putRzCanvasAddPadding.addPadding {
   padding: 30px;
 }
 
@@ -762,18 +783,179 @@ html{
   height: 400px !important;
 }
 
-.rzHeading {
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION MAN--------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.man {
+  padding: 60px 0 30px 0;
+  background-color: #f4f3f7;
+}
+
+.manInput {
+  margin: 40px auto;
+}
+
+.manRandomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.manRandomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.manRandomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.manRiForm {
+  display: block;
+}
+
+#manInputCons0 {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#manInputCons0:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.manRiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.manRiButton a:link,
+.manRiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.manRiButton a:hover,
+.manRiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+.manCustomInput {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.manCustomHeading h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.manCustomHeading h3:after {
+  margin: 10px auto 30px auto;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #b49ee9;
+}
+
+.manCiForm {
+  display: block;
+}
+
+#manInputDs {
+  vertical-align: middle;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 13px 20px 13px 20px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
+
+#manInputDs:hover {
+  border: 2px solid #4A10D1;
+  background-color: #ebe3fd;
+}
+
+.manCiButton {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.manCiButton a:link,
+.manCiButton a:visited {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  border: 2px solid#af96e7;
+  background-color: #c9b5f7;
+  transition: border 0.3s,
+    background-color 0.3s;
+}
+
+.manCiButton a:hover,
+.manCiButton a:active {
+  border: 2px solid #4A10D1;
+  background-color: #b49ee9;
+}
+
+#putManCanvas {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+#manChart {
+  margin: auto;
+  width: 90% !important;
+  height: 400px !important;
+}
+
+.manHeading {
   text-align: center;
 }
 
-.rzHeading h2 {
+.manHeading h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 220%;
   font-weight: 300;
 }
 
-.rzHeading h2:after {
+.manHeading h2:after {
   margin-top: 10px;
   display: block;
   content: "";

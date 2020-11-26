@@ -5,4 +5,7 @@ $(document).ready(function(){
     $(".js--wayPointNrzIButtons").click(function () {
         $(".putNrzICanvasAddPadding").addClass("addPadding");
     });
+    $(".js--wayPointRzButtons").click(function () {
+        $(".putRzCanvasAddPadding").addClass("addPadding");
+    });
 });

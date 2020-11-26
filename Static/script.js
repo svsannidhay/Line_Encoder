@@ -237,7 +237,7 @@ function nrzICanvasGenerator(dataArray,labelArray) {
 }
 
 /*//////////////////////////////////////////////////////////////////////*/
-/*--------------------SECTION NRZL-------------------------------------- */
+/*--------------------SECTION NRZL------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
 function nrzLencoder(arr){
   let nrzL = [];
@@ -484,4 +484,143 @@ function rzCanvasGenerator(dataArray,labelArray) {
     },
   });
   countrz++;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION MANCHESTER------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+function manEncoder(arr){
+  let rz = [];
+  let index = 0;
+  for(let i=0;i<=arr.length;i++){
+    if(arr[i]==0){
+      rz[index++] = -1;
+      rz[index++] = 1;
+    }else{
+      rz[index++] = 1;
+      rz[index++] = -1;
+    }
+  }
+  return rz; 
+}
+function manLabelArray(arr){
+  let labelArray = [];
+  let indexLA = 0;
+  let indexA = 0;
+  while (indexA < arr.length) {
+    if (indexLA % 2 == 0) {
+      labelArray[indexLA++] = arr[indexA++];
+    } else {
+      labelArray[indexLA++] = -1;
+    }
+  }
+  return labelArray;
+}
+function manRandomGen() {
+  let arr = randomBinaryArrayGen();
+  let input = document.getElementById("manInputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  let encodedSignal = manEncoder(arr);
+  let labelArray = manLabelArray(arr);
+  console.log(labelArray);
+  manCanvasGenerator(encodedSignal,labelArray);
+}
+
+function manCustomGen(){
+  let input = document.getElementById("manInputDs");
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    let encodedSignal = manEncoder(arr);
+    let labelArray = manLabelArray(arr);
+    manCanvasGenerator(encodedSignal,labelArray);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
+}
+
+var countMan = 0;
+function manCanvasGenerator(dataArray,labelArray) {
+  if (countMan > 0) {
+    document.getElementById("manChart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "manChart");
+  document.getElementById("putManCanvas").appendChild(canvas);
+  var ctx = document.getElementById("manChart").getContext("2d");
+  let canvasWidth = document.getElementById('manChart').offsetWidth;
+  console.log(canvasWidth);
+  let noOfdataelements = labelArray.length/2;
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      legend: {
+        display: false,
+      },
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: canvasWidth / 50,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+              callback: function (value, index, values) {
+                if (index % 2 === 0) {
+                  return value;
+                } else {
+                  return " ";
+                }
+              },
+            },
+            gridLines: {
+              lineWidth: 1,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countMan++;
 }
