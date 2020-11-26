@@ -381,6 +381,48 @@
       </div>     
     </section>
 
+    <section class="hdb3">
+      <div class="row hdb3Heading">
+        <h2>High-Density-bipolar 3-Zero (HDB3)</h2>
+      </div>
+      <div class="row hdb3Input">
+        <div class="hdb3RandomInput col span-1-of-2">
+          <div class="hdb3RandomHeading">
+            <h3>Generate random input</h3>
+          </div>
+          <div class="hdb3RiForm">
+            <form id="hdb3FormCons0" action="#" method="post">
+              <div class="hdb3FormBoxCons0" data-errormsg="Wrong format">
+                <label for="hdb3InputCons0"></label>
+                <input type="text" id="hdb3InputCons0" autofocus placeholder="No of consecutive zeros" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="hdb3RiButton">
+            <a href="#" class = "js--wayPointHdb3Buttons" onclick="hdb3RandomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div> 
+        <div class="hdb3CustomInput col span-1-of-2">
+          <div class="hdb3CustomHeading">
+            <h3>Enter Custom input</h3>
+          </div>
+          <div class="hdb3CiForm">
+            <form id="hdb3FormDs" action="#" method="post">
+              <div class="hdb3FormBoxDs" data-errormsg="Wrong format">
+                <label for="hdb3InputDs"></label>
+                <input type="text" id="hdb3InputDs" autofocus placeholder="Digital Signal" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="hdb3CiButton">
+            <a href="#" class = "js--wayPointHdb3Buttons" onclick="hdb3CustomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div id="putHdb3Canvas" class="row">
+      </div>     
+    </section>
 
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
