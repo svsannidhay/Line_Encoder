@@ -1056,3 +1056,153 @@ function bezsCanvasGenerator(dataArray,labelArray) {
   });
   countBezs++;
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*---------------------------SECTION HDB3------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+function hdb3Encoder(arr){
+  let hdb3 = [];
+  let count4 = 0;
+  let countPulses = 0;
+  let prevState = -2;
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==0){
+      count4++;
+      if(count4==4){
+        if(prevState==-2){
+          hdb3[i-3] = 1;
+          prevState = 1;
+          hdb3[i] = prevState;
+          countPulses+=2;
+        }else{
+          if(countPulses%2==0){
+            prevState = flipIt(prevState);
+            hdb3[i-3] = prevState;
+            hdb3[i] = prevState;
+            countPulses+=2;
+          }else{
+            hdb3[i] = prevState;
+            countPulses+=1;
+          }
+        }
+        count4 = 0;
+      }else{
+        hdb3[i] = 0;
+      }
+    }else{
+      count4 = 0;
+      countPulses++;
+      if(prevState==-2){
+        hdb3[i] = 1;
+        prevState = 1;
+      }else{
+        prevState = flipIt(prevState);
+        hdb3[i] = prevState;
+      }
+    }
+  }
+  return hdb3;
+}
+function hdb3LabelArray(arr){
+  let labelArray = arr;
+  return labelArray;
+}
+function hdb3RandomGen() {
+  let arr = randomBinaryArrayGen();
+  let input = document.getElementById("hdb3InputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  let encodedSignal = hdb3Encoder(arr);
+  let labelArray = hdb3LabelArray(arr);
+  hdb3CanvasGenerator(encodedSignal,labelArray);
+}
+
+function hdb3CustomGen(){
+  let input = document.getElementById("hdb3InputDs");
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    let encodedSignal = hdb3Encoder(arr);
+    let labelArray = hdb3LabelArray(arr);
+    hdb3CanvasGenerator(encodedSignal,labelArray);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
+}
+
+var countHdb3 = 0;
+function hdb3CanvasGenerator(dataArray,labelArray) {
+  if (countHdb3 > 0) {
+    document.getElementById("hdb3Chart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "hdb3Chart");
+  document.getElementById("putHdb3Canvas").appendChild(canvas);
+  var ctx = document.getElementById("hdb3Chart").getContext("2d");
+  let canvasWidth = document.getElementById('hdb3Chart').offsetWidth;
+  let noOfdataelements = labelArray.length;
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      legend: {
+        display: false,
+      },
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: canvasWidth / 50,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+            },
+            gridLines: {
+              lineWidth: 1,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countHdb3++;
+}
