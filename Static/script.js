@@ -22,6 +22,13 @@ function parserInt(string){
   arr[arr.length] = arr[arr.length-1];
   return arr;
 }
+function flipIt(bit) {
+  if (bit == 1) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
@@ -630,13 +637,6 @@ function manCanvasGenerator(dataArray,labelArray) {
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION DIFFERENTIAL MANCHESTER------------------ */
 /*//////////////////////////////////////////////////////////////////////*/
-function flipIt(bit){
-  if(bit==1){
-    return -1;
-  }else{
-    return 1;
-  }
-}
 function diffManEncoder(arr){
   let diffMan = [];
   let currState;
@@ -688,7 +688,6 @@ function diffManRandomGen() {
   }
   let encodedSignal = diffManEncoder(arr);
   let labelArray = diffManLabelArray(arr);
-  console.log(labelArray);
   diffManCanvasGenerator(encodedSignal,labelArray);
 }
 
@@ -715,7 +714,6 @@ function diffManCanvasGenerator(dataArray,labelArray) {
   document.getElementById("putDiffManCanvas").appendChild(canvas);
   var ctx = document.getElementById("diffManChart").getContext("2d");
   let canvasWidth = document.getElementById('diffManChart').offsetWidth;
-  console.log(canvasWidth);
   let noOfdataelements = labelArray.length/2;
   var myChart = new Chart(ctx, {
     type: "line",
@@ -785,4 +783,128 @@ function diffManCanvasGenerator(dataArray,labelArray) {
     },
   });
   countDiffMan++;
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*---------------------------SECTION AMI------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+function amiEncoder(arr){
+  let prevState = -2;
+  let ami = [];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==1){
+      if(prevState==-2){
+        ami[i] = 1;
+        prevState = 1;
+      }else{
+        prevState = flipIt(prevState);
+        ami[i] = prevState;
+      }
+    }else{
+      ami[i] = 0;
+    }
+  }
+  return ami;
+}
+function amiLabelArray(arr){
+  let labelArray = arr;
+  return labelArray;
+}
+function amiRandomGen() {
+  let arr = randomBinaryArrayGen();
+  let input = document.getElementById("amiInputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  let encodedSignal = amiEncoder(arr);
+  let labelArray = amiLabelArray(arr);
+  amiCanvasGenerator(encodedSignal,labelArray);
+}
+
+function amiCustomGen(){
+  let input = document.getElementById("amiInputDs");
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    let encodedSignal = amiEncoder(arr);
+    let labelArray = amiLabelArray(arr);
+    amiCanvasGenerator(encodedSignal,labelArray);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
+}
+
+var countAmi = 0;
+function amiCanvasGenerator(dataArray,labelArray) {
+  if (countAmi > 0) {
+    document.getElementById("amiChart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "amiChart");
+  document.getElementById("putAmiCanvas").appendChild(canvas);
+  var ctx = document.getElementById("amiChart").getContext("2d");
+  let canvasWidth = document.getElementById('amiChart').offsetWidth;
+  let noOfdataelements = labelArray.length;
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      legend: {
+        display: false,
+      },
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: canvasWidth / 50,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+            },
+            gridLines: {
+              lineWidth: 1,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countAmi++;
 }

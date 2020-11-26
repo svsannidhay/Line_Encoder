@@ -25,7 +25,8 @@
             <li><a href="#">Mancheste</a></li>
             <li><a href="#">Differential Mancheste</a></li>
             <li><a href="#">AMI</a></li>
-            <li><a href="#">Pseudoternary</a></li>                         
+            <li><a href="#">Pseudoternary</a></li>  
+            <li><a href="#">8BZS</a></li>                       
           </ul>  
         </div> 
         <div class="clearfix"></div> 
@@ -336,6 +337,51 @@
       <div id="putAmiCanvas" class="row">
       </div>     
     </section>
+
+    <section class="bezs">
+      <div class="row bezsHeading">
+        <h2>Biploar with 8-zeor Substitution (B8ZS)</h2>
+      </div>
+      <div class="row bezsInput">
+        <div class="bezsRandomInput col span-1-of-2">
+          <div class="bezsRandomHeading">
+            <h3>Generate random input</h3>
+          </div>
+          <div class="bezsRiForm">
+            <form id="bezsFormCons0" action="#" method="post">
+              <div class="bezsFormBoxCons0" data-errormsg="Wrong format">
+                <label for="bezsInputCons0"></label>
+                <input type="text" id="bezsInputCons0" autofocus placeholder="No of consecutive zeros" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="bezsRiButton">
+            <a href="#" onclick="bezsRandomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div> 
+        <div class="bezsCustomInput col span-1-of-2">
+          <div class="bezsCustomHeading">
+            <h3>Enter Custom input</h3>
+          </div>
+          <div class="bezsCiForm">
+            <form id="bezsFormDs" action="#" method="post">
+              <div class="bezsFormBoxDs" data-errormsg="Wrong format">
+                <label for="bezsInputDs"></label>
+                <input type="text" id="bezsInputDs" autofocus placeholder="Digital Signal" tabindex="10">
+              </div>
+            </form>
+          </div>
+          <div class="bezsCiButton">
+            <a href="#" onclick="amiCustomGen();event.preventDefault();">Generate</a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div id="putBezsCanvas" class="row">
+      </div>     
+    </section>
+
+
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
