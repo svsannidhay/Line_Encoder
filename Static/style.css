@@ -261,6 +261,28 @@ html{
   width: 90% !important;
   height:400px !important;
 }
+.nrzDivLPS{
+  text-align: center;
+  padding:20px 30px 20px 30px;
+}
+.nrzLPSHeading{
+  margin-right:20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+#nrzLPSForm{
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZI-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
@@ -421,7 +443,31 @@ html{
   width: 90% !important;
   height: 400px !important;
 }
+.nrzIDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
 
+.nrzILPSHeading {
+  color: black;
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#nrzILPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZL------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/

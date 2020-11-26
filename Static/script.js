@@ -50,8 +50,9 @@ function processStringForLps(s){
   str = str.join('');
   return str;
 }
-processStringForLps("czcaba");
 function LPS_ManachersAlgo(s){
+  s = s.join('');
+  console.log(s);
   let p = [];
   str = processStringForLps(s);
   for(let i=0;i<str.length+1;i++){
@@ -88,8 +89,8 @@ function LPS_ManachersAlgo(s){
   }
   ans = ans.join('');
   console.log(ans);
+  return ans;
 }
-LPS_ManachersAlgo("czcaba");
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
@@ -114,7 +115,25 @@ function nrzRandomGen(){
 }
 var countNrz = 0;
 function nrzCanvasGenerator(dataArray) {
+  
+  let divLPS = document.createElement('div');
+  divLPS.setAttribute("class","row nrzDivLPS");
+  divLPS.setAttribute("id", "nrzDivLPS");
+  let h4 = document.createElement('h4');
+  h4.setAttribute("class","nrzLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement('input');
+  input.setAttribute("id",'nrzLPSForm');
+  input.setAttribute("readonly","true");
+  input.value = LPS_ManachersAlgo(dataArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putNrzCanvas").appendChild(divLPS);
+
+  
   if(countNrz>0){
+    document.getElementById('nrzDivLPS').remove();
     document.getElementById('nrzChart').remove();
   }
   let canvas = document.createElement("canvas");
@@ -122,7 +141,6 @@ function nrzCanvasGenerator(dataArray) {
   document.getElementById("putNrzCanvas").appendChild(canvas);
   var ctx = document.getElementById("nrzChart").getContext("2d");
   let canvasWidth = document.getElementById("nrzChart").offsetWidth;
-  console.log(canvasWidth);
   let noOfdataelements = dataArray.length;
   var myChart = new Chart(ctx, {
     type: "line",
@@ -237,7 +255,26 @@ function nrzICustomGen(){
 
 var countNrzI = 0;
 function nrzICanvasGenerator(dataArray,labelArray) {
+
+
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row nrzIDivLPS");
+  divLPS.setAttribute("id", "nrzIDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "nrzILPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "nrzILPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(labelArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putNrzICanvas").appendChild(divLPS);
+
+
   if (countNrzI > 0) {
+    document.getElementById("nrzIDivLPS").remove();
     document.getElementById("nrzIChart").remove();
   }
   let canvas = document.createElement("canvas");
