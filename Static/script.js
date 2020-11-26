@@ -283,7 +283,7 @@ function nrzLCanvasGenerator(dataArray,labelArray) {
   document.getElementById("putNrzLCanvas").appendChild(canvas);
   var ctx = document.getElementById("nrzLChart").getContext("2d");
   let canvasWidth = document.getElementById("nrzLChart").offsetWidth;
-  console.log(canvasWidth);
+  console.log(canvasWidth + 'here');
   let noOfdataelements = labelArray.length;
   var myChart = new Chart(ctx, {
     type: "line",
@@ -391,7 +391,7 @@ function rzRandomGen() {
   rzCanvasGenerator(encodedSignal,labelArray);
 }
 
-function nrzLCustomGen(){
+function rzCustomGen(){
   let input = document.getElementById("rzInputDs");
   let string = input.value;
   if (validate(string)) {
@@ -404,9 +404,9 @@ function nrzLCustomGen(){
   }
 }
 
-var countNrzL = 0;
+var countrz = 0;
 function rzCanvasGenerator(dataArray,labelArray) {
-  if (countNrzL > 0) {
+  if (countrz > 0) {
     document.getElementById("rzChart").remove();
   }
   let canvas = document.createElement("canvas");
@@ -483,5 +483,5 @@ function rzCanvasGenerator(dataArray,labelArray) {
       },
     },
   });
-  countNrzL++;
+  countrz++;
 }
