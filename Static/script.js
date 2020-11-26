@@ -1,9 +1,13 @@
 function randomBinaryArrayGen(){
   let arr = [];
-  for(let i=1;i<=13;i++){
+  for(let i=1;i<=15;i++){
     arr.push(Math.floor((Math.random() * 1.99)));
   }
   return arr;
+}
+function consZeroPosGen() {
+  start = (Math.floor(Math.random() * 5.99));
+  return start;
 }
 function validate(string) {
   let valid = true;
@@ -44,8 +48,9 @@ function nrzCustomGen() {
 function nrzRandomGen(){
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("nrzInputCons0");
-  let cons0 = input.value;
-  for (let i = 0; i < cons0; i++) {
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   nrzCanvasGenerator(arr);
@@ -150,8 +155,9 @@ function nrzIencoder(arr){
 function nrzIRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("nrzIInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   console.log(arr);
@@ -260,8 +266,9 @@ function nrzLencoder(arr){
 function nrzLRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("nrzLInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   let encodedSignal = nrzLencoder(arr);
@@ -388,8 +395,9 @@ function rzLabelArray(arr){
 function rzRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("rzInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   let encodedSignal = rzEncoder(arr);
@@ -527,8 +535,9 @@ function manLabelArray(arr){
 function manRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("manInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   let encodedSignal = manEncoder(arr);
@@ -682,8 +691,9 @@ function diffManLabelArray(arr){
 function diffManRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("diffManInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   let encodedSignal = diffManEncoder(arr);
@@ -813,8 +823,9 @@ function amiLabelArray(arr){
 function amiRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("amiInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   let encodedSignal = amiEncoder(arr);
@@ -961,8 +972,9 @@ function bezsLabelArray(arr){
 function bezsRandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("bezsInputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value);
+  for (let i = start; i < cons0 + start; i++) {
     arr[i] = 0;
   }
   let encodedSignal = bezsEncoder(arr);
@@ -1111,8 +1123,9 @@ function hdb3LabelArray(arr){
 function hdb3RandomGen() {
   let arr = randomBinaryArrayGen();
   let input = document.getElementById("hdb3InputCons0");
-  let cons0 = input.value;
-  for(let i=0;i<cons0;i++){
+  let start = consZeroPosGen();
+  let cons0 = Number(input.value)
+  for(let i=start;i<(cons0+start);i++){
     arr[i] = 0;
   }
   let encodedSignal = hdb3Encoder(arr);
