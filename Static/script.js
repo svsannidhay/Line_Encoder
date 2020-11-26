@@ -908,3 +908,151 @@ function amiCanvasGenerator(dataArray,labelArray) {
   });
   countAmi++;
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*---------------------------SECTION B8ZS------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+function bezsEncoder(arr){
+  let bezs = [];
+  let count8 = 0;
+  let prevState = -2;
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==0){
+      count8++;
+      if(count8==8){
+        if(prevState==-2){
+          bezs[i-4] = 1;
+          prevState = 1;
+          prevState = flipIt(prevState);
+          bezs[i-3] = prevState;
+          bezs[i-1] = prevState;
+          prevState = flipIt(prevState);
+          bezs[i] = prevState;
+        }else{
+          bezs[i - 4] = prevState;
+          prevState = flipIt(prevState);
+          bezs[i - 3] = prevState;
+          bezs[i - 1] = prevState;
+          prevState = flipIt(prevState);
+          bezs[i] = prevState;
+        }
+        count8 = 0;
+      }else{
+        bezs[i] = 0;
+      }
+    }else{
+      count8 = 0;
+      if(prevState==-2){
+        bezs[i] = 1;
+        prevState = 1;
+      }else{
+        prevState = flipIt(prevState);
+        bezs[i] = prevState;
+      }
+    }
+  }
+  return bezs;
+}
+function bezsLabelArray(arr){
+  let labelArray = arr;
+  return labelArray;
+}
+function bezsRandomGen() {
+  let arr = randomBinaryArrayGen();
+  let input = document.getElementById("bezsInputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  let encodedSignal = bezsEncoder(arr);
+  let labelArray = bezsLabelArray(arr);
+  bezsCanvasGenerator(encodedSignal,labelArray);
+}
+
+function bezsCustomGen(){
+  let input = document.getElementById("bezsInputDs");
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    let encodedSignal = bezsEncoder(arr);
+    let labelArray = bezsLabelArray(arr);
+    bezsCanvasGenerator(encodedSignal,labelArray);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
+}
+
+var countBezs = 0;
+function bezsCanvasGenerator(dataArray,labelArray) {
+  if (countBezs > 0) {
+    document.getElementById("bezsChart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "bezsChart");
+  document.getElementById("putBezsCanvas").appendChild(canvas);
+  var ctx = document.getElementById("bezsChart").getContext("2d");
+  let canvasWidth = document.getElementById('bezsChart').offsetWidth;
+  let noOfdataelements = labelArray.length;
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      legend: {
+        display: false,
+      },
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: canvasWidth / 50,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+            },
+            gridLines: {
+              lineWidth: 1,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countBezs++;
+}
