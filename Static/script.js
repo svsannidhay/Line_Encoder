@@ -52,6 +52,9 @@ function nrzCanvasGenerator(dataArray) {
   canvas.setAttribute("id", "nrzChart");
   document.getElementById("putNrzCanvas").appendChild(canvas);
   var ctx = document.getElementById("nrzChart").getContext("2d");
+  let canvasWidth = document.getElementById("nrzChart").offsetWidth;
+  console.log(canvasWidth);
+  let noOfdataelements = dataArray.length;
   var myChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -83,7 +86,7 @@ function nrzCanvasGenerator(dataArray) {
               min: -2,
               max: 2,
               stepSize: 1,
-              fontSize: 16,
+              fontSize: canvasWidth / 50,
             },
             scaleLabel: {
               display: true,
@@ -95,8 +98,8 @@ function nrzCanvasGenerator(dataArray) {
         xAxes: [
           {
             ticks: {
-              fontSize: 16,
-              labelOffset: 40,
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 1.8),
             },
             scaleLabel: {
               display: true,
@@ -171,6 +174,9 @@ function nrzICanvasGenerator(dataArray,labelArray) {
   canvas.setAttribute("id", "nrzIChart");
   document.getElementById("putNrzICanvas").appendChild(canvas);
   var ctx = document.getElementById("nrzIChart").getContext("2d");
+  let canvasWidth = document.getElementById("nrzIChart").offsetWidth;
+  console.log(canvasWidth);
+  let noOfdataelements = labelArray.length;
   var myChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -202,7 +208,7 @@ function nrzICanvasGenerator(dataArray,labelArray) {
               min: -2,
               max: 2,
               stepSize: 1,
-              fontSize: 16,
+              fontSize: canvasWidth / 50,
             },
             scaleLabel: {
               display: true,
@@ -214,8 +220,8 @@ function nrzICanvasGenerator(dataArray,labelArray) {
         xAxes: [
           {
             ticks: {
-              fontSize: 16,
-              labelOffset: 40,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+              fontSize: canvasWidth / 50,
             },
             scaleLabel: {
               display: true,
@@ -276,6 +282,9 @@ function nrzLCanvasGenerator(dataArray,labelArray) {
   canvas.setAttribute("id", "nrzLChart");
   document.getElementById("putNrzLCanvas").appendChild(canvas);
   var ctx = document.getElementById("nrzLChart").getContext("2d");
+  let canvasWidth = document.getElementById("nrzLChart").offsetWidth;
+  console.log(canvasWidth);
+  let noOfdataelements = labelArray.length;
   var myChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -307,7 +316,7 @@ function nrzLCanvasGenerator(dataArray,labelArray) {
               min: -2,
               max: 2,
               stepSize: 1,
-              fontSize: 16,
+              fontSize: canvasWidth / 50,
             },
             scaleLabel: {
               display: true,
@@ -319,15 +328,144 @@ function nrzLCanvasGenerator(dataArray,labelArray) {
         xAxes: [
           {
             ticks: {
-              fontSize: 16,
-              labelOffset: 40,
-              // callback: function(value, index, values) {
-              //   if (index % 2 === 0) {
-              //     return value;
-              //   } else {
-              //     return ' ';
-              //   }
-              // }  
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+            },
+            gridLines: {
+              lineWidth: 1,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "signal elements",
+            },
+          },
+        ],
+      },
+    },
+  });
+  countNrzL++;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*--------------------SECTION RZ-------------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+function rzEncoder(arr){
+  let rz = [];
+  let index = 0;
+  for(let i=0;i<=arr.length;i++){
+    if(arr[i]==0){
+      rz[index++] = -1;
+      rz[index++] = 0;
+    }else{
+      rz[index++] = 1;
+      rz[index++] = 0;
+    }
+  }
+  return rz; 
+}
+function rzRandomGen() {
+  let arr = randomBinaryArrayGen();
+  let input = document.getElementById("rzInputCons0");
+  let cons0 = input.value;
+  for(let i=0;i<cons0;i++){
+    arr[i] = 0;
+  }
+  let encodedSignal = rzEncoder(arr);
+  console.log(arr);
+  console.log(encodedSignal);
+  let labelArray = [];
+  let indexLA = 0;
+  let indexA = 0;
+  while(indexA<arr.length){
+    if(indexLA%2==0){
+      labelArray[indexLA++] = arr[indexA++];
+    }else{
+      labelArray[indexLA++] = -1;
+    }
+  }
+  console.log(labelArray);
+  rzCanvasGenerator(encodedSignal,labelArray);
+}
+
+function nrzLCustomGen(){
+  let input = document.getElementById("nrzLInputDs");
+  let string = input.value;
+  if (validate(string)) {
+    let arr = parserInt(string);
+    let encodedSignal = nrzLencoder(arr);
+    nrzLCanvasGenerator(encodedSignal, arr);
+  } else {
+    alert("Please Enter a valid digital signal");
+  }
+}
+
+var countNrzL = 0;
+function rzCanvasGenerator(dataArray,labelArray) {
+  if (countNrzL > 0) {
+    document.getElementById("rzChart").remove();
+  }
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "rzChart");
+  document.getElementById("putRzCanvas").appendChild(canvas);
+  var ctx = document.getElementById("rzChart").getContext("2d");
+  let canvasWidth = document.getElementById('rzChart').offsetWidth;
+  console.log(canvasWidth);
+  let noOfdataelements = labelArray.length/2;
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labelArray,
+      datasets: [
+        {
+          borderColor: "rgb(77, 77, 177)",
+          data: dataArray,
+          steppedLine: true,
+          borderWidth: 2,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      legend: {
+        display: false,
+      },
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: -2,
+              max: 2,
+              stepSize: 1,
+              fontSize: canvasWidth / 50,
+            },
+            scaleLabel: {
+              display: true,
+              align: "center",
+              labelString: "voltage",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: canvasWidth / 50,
+              labelOffset: canvasWidth / (noOfdataelements * 2),
+              callback: function (value, index, values) {
+                if (index % 2 === 0) {
+                  return value;
+                } else {
+                  return " ";
+                }
+              },
             },
             gridLines: {
               lineWidth: 1,
