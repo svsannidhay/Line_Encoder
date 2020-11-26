@@ -33,6 +33,63 @@ function flipIt(bit) {
     return 1;
   }
 }
+
+function min(a,b){
+  if(a<b) return a;
+  else return b;
+}
+/* MANACHER'S ALGORITHM */
+function processStringForLps(s){
+  let str = [];
+  str[0] = "#";
+  index  = 1;
+  for(let i=0;i<s.length;i++){
+    str[index++] = s[i];
+    str[index++] = "#";
+  }
+  str = str.join('');
+  return str;
+}
+processStringForLps("czcaba");
+function LPS_ManachersAlgo(s){
+  let p = [];
+  str = processStringForLps(s);
+  for(let i=0;i<str.length+1;i++){
+    p[i] = 0;
+  }
+  let c = 0;let r = 0;
+  for(let i=1;i<str.length;i++){
+    let iMirror = c - (i-c);
+    if(r>i){
+      p[i] = min(r-i,p[iMirror]);
+    }
+    while(str[i+1+p[i]]==str[i-1-p[i]]){
+      p[i]++;
+    }
+    if(i+p[i]>r){
+      c = i;
+      r = i + p[i]; 
+    }
+  }
+  let maxLen = 0;let cIndex = 0;
+  for(let i=1;i<str.length;i++){
+    if(p[i]>maxLen){
+      maxLen = p[i];
+      cIndex = i;
+    }
+  }
+  let ans = [];
+  let index = 0;
+  for(let i=cIndex-p[cIndex];i<=(cIndex+p[cIndex]);i++){
+    if(str[i]!='#'){
+      ans[index] = str[i];
+      index++;
+    }
+  }
+  ans = ans.join('');
+  console.log(ans);
+}
+LPS_ManachersAlgo("czcaba");
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION NRZ-------------------------------------- */
 /*//////////////////////////////////////////////////////////////////////*/
