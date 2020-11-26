@@ -8,4 +8,7 @@ $(document).ready(function(){
     $(".js--wayPointRzButtons").click(function () {
         $(".putRzCanvasAddPadding").addClass("addPadding");
     });
+    $(".js--wayPointDiffManButtons").click(function(){
+        $(".putDiffManCanvasAddPadding").addClass("addPadding");
+    });
 });
