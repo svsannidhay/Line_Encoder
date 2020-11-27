@@ -24,9 +24,9 @@ Deployment :- <a href="https://svsannidhay.github.io/Line_Encoder/" target = "_b
 
 ## User interface 
 > Every encoding or scrambling section have two interaction fields. <br>
-> One on the left, here we have random Input generator in which we can input minimum no of consecutive zeros we must have in our randomly generated input.
-> One on the right, here we have a custom input section in which user can enter any valid boolean (Digital signal of form 1 or 0) and it will be treated as input
-> Next we have generate buttons which onclick will enter the input accordingly and we have a encoded signal in form of the chart and the longest palindromic substring of the data elements. 
+> One on the left, here we have random Input generator in which we can input minimum no of consecutive zeros we must have in our randomly generated input.<br>
+> One on the right, here we have a custom input section in which user can enter any valid boolean (Digital signal of form 1 or 0) and it will be treated as input.<br>
+> Next we have generate buttons which onclick will enter the input accordingly and we have a encoded signal in form of the chart and the longest palindromic substring of the data elements. <br>
 
 ## Display:
 ![alt text](https://github.com/svsannidhay/Line_Encoder/blob/master/Display%20images/full%20website.png)
