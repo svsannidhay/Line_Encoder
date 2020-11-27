@@ -47,6 +47,8 @@ html{
 }
 /* main nav bar */
 .navMenu{
+  display: inline-block;
+  
   /* background-color: #b49ee9; */
   opacity: 0.95;
 } 
@@ -86,7 +88,7 @@ html{
 }
 .sticky .navMenu ul li a:link,
 .sticky .navMenu ul li a:visited {
-  padding:0 3px 8px 3px;
+  padding:0 3px 12px 3px;
   color: #555;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.3s, color 0.3s;
@@ -96,6 +98,19 @@ html{
 .sticky .navMenu ul li a:active {
   border-bottom: 2px solid #3500af;
 }
+/* Mobile navigation */
+.mobileNavIcon,
+.mobileNavIconCross {
+  float: right;
+  padding:20px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+.show.mobileNavIconCross{display: inline-block;}
+.hide.mobileNavIconCross{display: none;}
+.show.mobileNavIcon{display: inline-block;}
+.hide.mobileNavIcon{display: none;}
 
 /*MAIN HEADING*/
 .headerHeading{

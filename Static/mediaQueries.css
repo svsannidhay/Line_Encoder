@@ -7,9 +7,18 @@
   .nrzHeading h2:after,
   .nrzIHeading h2:after,
   .nrzLHeading h2:after,
-  .rzHeading h2:after{
+  .rzHeading h2:after,
+  .manHeading h2:after,
+  .diffManHeading h2:after,
+  .amiHeading h2:after,
+  .bezsHeading h2:after,
+  .hdb3Heading h2:after{
     width:96%;
     margin:10px auto;
+  }
+  .navMenu ul li {
+    font-size: 95%;
+    margin: 0 10px 0 10px;
   }
   .nrzRandomHeading h3:after,
   .nrzCustomHeading h3:after,
@@ -18,10 +27,30 @@
   .nrzLRandomHeading h3:after,
   .nrzLCustomHeading h3:after,
   .rzRandomHeading h3:after,
-  .rzCustomHeading h3:after{
+  .rzCustomHeading h3:after,
+  .manRandomHeading h3:after,
+  .manCustomHeading h3:after,
+  .diffManRandomHeading h3:after,
+  .diffManCustomHeading h3:after,
+  .amiRandomHeading h3:after,
+  .amiCustomHeading h3:after,
+  .bezsRandomHeading h3:after,
+  .bezsCustomHeading h3:after,
+  .hdb3RandomHeading h3:after,
+  .hdb3CustomHeading h3:after {
     width:90%;
   }
 } 
+@media only screen and (min-width: 1024px) {
+  .navMenu ul{
+    display: inline-block !important;
+  }
+
+  .mobileNavIcon,
+  .mobileNavIconCross {
+    display: none !important;
+  }
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*----------SMALL TABLETS TO LARGE TABLETS -------768px to 1023px-------*/
 /*//////////////////////////////////////////////////////////////////////*/
@@ -31,6 +60,31 @@
   #nrzChart {
     height:320px !important;
   }
+  .navMenu ul{
+    display: none;
+  }
+  .navMenu ul li{
+    margin:0 10px 0 10px;
+  }
+  .mobileNavIcon{
+    display: inline-block;
+    font-size: 200%;
+  }
+  .mobileNavIconCross{
+    font-size: 200%;
+  }
+  .sticky .mobileNavIcon,
+  .sticky .mobileNavIconCross{
+    color: #555;
+    padding:10px;
+  }
+  .navMenu ul li{
+    
+    text-align: left;
+    padding:10px;
+    display: block;
+  }
+
 }
 /*//////////////////////////////////////////////////////////////////////*/
 /*-----------------LARGE PHONES TO SMALL TABLETS ------- 481px to 767px-------*/

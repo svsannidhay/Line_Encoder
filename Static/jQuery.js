@@ -14,6 +14,21 @@ $(document).ready(function(){
         offset:'70px'
     });
     /*------------------------------*/
+    /*-------Mobile  navigation-----*/
+    /*------------------------------*/
+    $('.js--navIcon').click(function(){
+        var nav = $('.js--navMenu'); 
+        nav.slideToggle(200);
+        $('.js--navIcon').addClass('hide');
+        $('.js--navIconCross').addClass('show');
+    });
+    $('.js--navIconCross').click(function(){
+        var nav = $('.js--navMenu'); 
+        nav.slideToggle(200);
+        $('.js--navIcon').removeClass('hide');
+        $('.js--navIconCross').removeClass('show');
+    });
+    /*------------------------------*/
     /*------NRZI padding adder------*/
     /*------------------------------*/
     $(".js--wayPointNrzIButtons").click(function () {
