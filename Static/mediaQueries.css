@@ -1,3 +1,5 @@
+/* < !-- Github REPOSITORY url https: //github.com/svsannidhay/Line_Encoder --> */
+/* < !-- LATEST DEPLOYMENT :- https: //svsannidhay.github.io/Line_Encoder/ --> */
 /*//////////////////////////////////////////////////////////////////////*/
 /*-----------------BIG TABLETS TO LAPTOPS--------1024px to 1200px-------*/
 /*//////////////////////////////////////////////////////////////////////*/
@@ -56,7 +58,6 @@
 /*//////////////////////////////////////////////////////////////////////*/
 @media only screen and (max-width:1023px) {
   html {font-size: 16px;}
-  #nrzIChart,
   .navMenu{
     background-color: #b49ee9;
     box-shadow: 2px 2px 2px #555;
@@ -90,7 +91,6 @@
     padding:10px;
   }
   .navMenu ul li{
-    
     text-align: left;
     padding:10px;
     display: block;

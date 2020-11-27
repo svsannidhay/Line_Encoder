@@ -1,3 +1,6 @@
+// <!-- Github REPOSITORY url  https://github.com/svsannidhay/Line_Encoder -->
+// <!-- LATEST DEPLOYMENT :- https://svsannidhay.github.io/Line_Encoder/ -->
+
 function randomBinaryArrayGen(){
   let arr = [];
   for(let i=1;i<=15;i++){
