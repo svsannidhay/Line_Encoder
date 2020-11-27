@@ -37,7 +37,8 @@ html{
 /*//////////////////////////////////////////////////////////////////////*/
 .header{
   position: relative;
-  background: linear-gradient(to top right,rgba(159, 4, 248, 0.445),rgba(2, 8, 95, 0.603)),url("Images/headerBackground.jpg");
+  background: linear-gradient(to top right, rgba(160, 8, 255, 0.712), rgba(0, 0, 0, 0.877)),
+  url("Images/headerBackground.jpg");
   background-position: center;
   background-size: cover;
   height:95vh;
@@ -48,8 +49,6 @@ html{
 /* main nav bar */
 .navMenu{
   display: inline-block;
-  
-  /* background-color: #b49ee9; */
   opacity: 0.95;
 } 
 .navMenu ul{
@@ -1940,4 +1939,55 @@ html{
   font-size: 80%;
   text-transform: uppercase;
   border: 2px solid#af96e7;
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*-------------------------------FOOTER-------------------------------- */
+/*//////////////////////////////////////////////////////////////////////*/
+.footer{
+  height:20vh;
+  background: linear-gradient(to top right, rgba(160, 8, 255, 0.712), rgba(0, 0, 0, 0.877)),
+  url("Images/headerBackground.jpg");
+}
+.footerText{
+  color: #fff;
+  text-align: center;
+}
+.footerText p{
+  margin-top: 30px;
+  font-size: 80%;
+  text-transform: capitalize;
+}
+.footerNav {
+  margin-top: 40px;
+  float: left;
+}
+
+.footerSocial {
+  margin-top: 40px;
+  float: right;
+}
+
+.footerBox ul {
+  padding: 10px 0;
+  list-style: none;
+}
+
+.footerBox ul li {
+  display: inline-block;
+}
+
+.footerBox ul li a:link,
+.footerBox ul li a:visited {
+  color: #bea146;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.5s, color 0.5s;
+}
+
+.footerBox ul li a:hover,
+.footerBox ul li a:active {
+  color: #aa8e36;
+  border-bottom: 2px solid #aa8e36;
 }

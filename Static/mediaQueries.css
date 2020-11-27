@@ -95,7 +95,10 @@
     padding:10px;
     display: block;
   }
-
+  .footerNav li a {
+    font-size: 87%;
+    padding: 10px 5px !important;
+  }
 }
 /*//////////////////////////////////////////////////////////////////////*/
 /*-----------------LARGE PHONES TO SMALL TABLETS ------- 481px to 767px-------*/
@@ -115,6 +118,29 @@
   .nrzCustomInput,
   .nrzICustomInput {
     margin-left:0;
+  }
+  .footerBox ul li a {
+    font-size: 90%;
+    padding: 10px !important;
+  }
+
+  .footerBox ul {
+    padding: 7px 0;
+  }
+
+  .footerNav {
+    margin-top: 10px !important;
+    text-align: center;
+    float: none;
+  }
+
+  .footerSocial {
+    margin-top: 10px !important;
+    text-align: center;
+    float: none;
+  }
+  .footerText p{
+    margin-top: 20px !important;
   }
 }
 /*//////////////////////////////////////////////////////////////////////*/
