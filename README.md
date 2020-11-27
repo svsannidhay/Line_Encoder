@@ -24,3 +24,21 @@ Deployment :- <a href="https://svsannidhay.github.io/Line_Encoder/" target = "_b
 
 ## Display:
 ![alt text](https://github.com/svsannidhay/Line_Encoder/blob/master/Display%20images/full%20website.png)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+## Default Nav bar
+![alt text](https://github.com/svsannidhay/Line_Encoder/blob/master/Display%20images/Deafult%20nav%20bar.png)
+<br>
+<br>
+<br>
+## Mobile Nav bar 
+![alt text](https://github.com/svsannidhay/Line_Encoder/blob/master/Display%20images/mobile%20nav%20bar.png)
+<br>
+<br>
+<br>
+## Sticky Nav bar 
+![alt text](https://github.com/svsannidhay/Line_Encoder/blob/master/Display%20images/Sticky%20Nav%20bar.png)
