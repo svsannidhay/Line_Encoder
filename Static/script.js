@@ -115,27 +115,24 @@ function nrzRandomGen(){
 }
 var countNrz = 0;
 function nrzCanvasGenerator(dataArray) {
-  
-  let divLPS = document.createElement('div');
-  divLPS.setAttribute("class","row nrzDivLPS");
-  divLPS.setAttribute("id", "nrzDivLPS");
-  let h4 = document.createElement('h4');
-  h4.setAttribute("class","nrzLPSHeading");
-  let text = document.createTextNode("Longest Palindromic Substring : ");
-  h4.appendChild(text);
-  let input = document.createElement('input');
-  input.setAttribute("id",'nrzLPSForm');
-  input.setAttribute("readonly","true");
-  input.value = LPS_ManachersAlgo(dataArray);
-  divLPS.appendChild(h4);
-  divLPS.appendChild(input);
-  document.getElementById("putNrzCanvas").appendChild(divLPS);
-
-  
   if(countNrz>0){
     document.getElementById('nrzDivLPS').remove();
     document.getElementById('nrzChart').remove();
   }
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row nrzDivLPS");
+  divLPS.setAttribute("id", "nrzDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "nrzLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "nrzLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(dataArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putNrzCanvas").appendChild(divLPS);
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "nrzChart");
   document.getElementById("putNrzCanvas").appendChild(canvas);
@@ -255,8 +252,10 @@ function nrzICustomGen(){
 
 var countNrzI = 0;
 function nrzICanvasGenerator(dataArray,labelArray) {
-
-
+  if (countNrzI > 0) {
+    document.getElementById("nrzIDivLPS").remove();
+    document.getElementById("nrzIChart").remove();
+  }
   let divLPS = document.createElement("div");
   divLPS.setAttribute("class", "row nrzIDivLPS");
   divLPS.setAttribute("id", "nrzIDivLPS");
@@ -271,12 +270,6 @@ function nrzICanvasGenerator(dataArray,labelArray) {
   divLPS.appendChild(h4);
   divLPS.appendChild(input);
   document.getElementById("putNrzICanvas").appendChild(divLPS);
-
-
-  if (countNrzI > 0) {
-    document.getElementById("nrzIDivLPS").remove();
-    document.getElementById("nrzIChart").remove();
-  }
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "nrzIChart");
   document.getElementById("putNrzICanvas").appendChild(canvas);
@@ -383,7 +376,10 @@ function nrzLCustomGen(){
 
 var countNrzL = 0;
 function nrzLCanvasGenerator(dataArray,labelArray) {
-
+  if (countNrzL > 0) {
+    document.getElementById("nrzLDivLPS").remove();
+    document.getElementById("nrzLChart").remove();
+  }
   let divLPS = document.createElement("div");
   divLPS.setAttribute("class", "row nrzLDivLPS");
   divLPS.setAttribute("id", "nrzLDivLPS");
@@ -398,12 +394,6 @@ function nrzLCanvasGenerator(dataArray,labelArray) {
   divLPS.appendChild(h4);
   divLPS.appendChild(input);
   document.getElementById("putNrzLCanvas").appendChild(divLPS);
-
-
-  if (countNrzL > 0) {
-    document.getElementById("nrzLDivLPS").remove();
-    document.getElementById("nrzLChart").remove();
-  }
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "nrzLChart");
   document.getElementById("putNrzLCanvas").appendChild(canvas);
@@ -532,8 +522,10 @@ function rzCustomGen(){
 
 var countrz = 0;
 function rzCanvasGenerator(dataArray,labelArray,arr) {
-
-
+  if (countrz > 0) {
+    document.getElementById("rzDivLPS").remove();
+    document.getElementById("rzChart").remove();
+  }
   let divLPS = document.createElement("div");
   divLPS.setAttribute("class", "row rzDivLPS");
   divLPS.setAttribute("id", "rzDivLPS");
@@ -548,11 +540,6 @@ function rzCanvasGenerator(dataArray,labelArray,arr) {
   divLPS.appendChild(h4);
   divLPS.appendChild(input);
   document.getElementById("putRzCanvas").appendChild(divLPS);
-
-  if (countrz > 0) {
-    document.getElementById("rzDivLPS").remove();
-    document.getElementById("rzChart").remove();
-  }
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "rzChart");
   document.getElementById("putRzCanvas").appendChild(canvas);
@@ -689,7 +676,10 @@ function manCustomGen(){
 
 var countMan = 0;
 function manCanvasGenerator(dataArray,labelArray,arr) {
-
+  if (countMan > 0) {
+    document.getElementById("manDivLPS").remove();
+    document.getElementById("manChart").remove();
+  }
   let divLPS = document.createElement("div");
   divLPS.setAttribute("class", "row manDivLPS");
   divLPS.setAttribute("id", "manDivLPS");
@@ -704,12 +694,6 @@ function manCanvasGenerator(dataArray,labelArray,arr) {
   divLPS.appendChild(h4);
   divLPS.appendChild(input);
   document.getElementById("putManCanvas").appendChild(divLPS);
-
-
-  if (countMan > 0) {
-    document.getElementById("manDivLPS").remove();
-    document.getElementById("manChart").remove();
-  }
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "manChart");
   document.getElementById("putManCanvas").appendChild(canvas);
@@ -861,7 +845,10 @@ function diffManCustomGen(){
 
 var countDiffMan = 0;
 function diffManCanvasGenerator(dataArray,labelArray,arr) {
-
+  if (countDiffMan > 0) {
+    document.getElementById("diffManDivLPS").remove();
+    document.getElementById("diffManChart").remove();
+  }
   let divLPS = document.createElement("div");
   divLPS.setAttribute("class", "row diffManDivLPS");
   divLPS.setAttribute("id", "diffManDivLPS");
@@ -876,11 +863,6 @@ function diffManCanvasGenerator(dataArray,labelArray,arr) {
   divLPS.appendChild(h4);
   divLPS.appendChild(input);
   document.getElementById("putDiffManCanvas").appendChild(divLPS);
-
-  if (countDiffMan > 0) {
-    document.getElementById("diffManDivLPS").remove();
-    document.getElementById("diffManChart").remove();
-  }
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "diffManChart");
   document.getElementById("putDiffManCanvas").appendChild(canvas);
@@ -1011,8 +993,23 @@ function amiCustomGen(){
 var countAmi = 0;
 function amiCanvasGenerator(dataArray,labelArray) {
   if (countAmi > 0) {
+    document.getElementById('amiDivLPS').remove();
     document.getElementById("amiChart").remove();
   }
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row amiDivLPS");
+  divLPS.setAttribute("id", "amiDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "amiLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "amiLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(labelArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putAmiCanvas").appendChild(divLPS);
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "amiChart");
   document.getElementById("putAmiCanvas").appendChild(canvas);
@@ -1160,8 +1157,23 @@ function bezsCustomGen(){
 var countBezs = 0;
 function bezsCanvasGenerator(dataArray,labelArray) {
   if (countBezs > 0) {
+    document.getElementById("bezsDivLPS").remove();
     document.getElementById("bezsChart").remove();
   }
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row bezsDivLPS");
+  divLPS.setAttribute("id", "bezsDivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "bezsLPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "bezsLPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(labelArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putBezsCanvas").appendChild(divLPS);
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "bezsChart");
   document.getElementById("putBezsCanvas").appendChild(canvas);
@@ -1311,8 +1323,23 @@ function hdb3CustomGen(){
 var countHdb3 = 0;
 function hdb3CanvasGenerator(dataArray,labelArray) {
   if (countHdb3 > 0) {
+    document.getElementById("hdb3DivLPS").remove();
     document.getElementById("hdb3Chart").remove();
   }
+  let divLPS = document.createElement("div");
+  divLPS.setAttribute("class", "row hdb3DivLPS");
+  divLPS.setAttribute("id", "hdb3DivLPS");
+  let h4 = document.createElement("h4");
+  h4.setAttribute("class", "hdb3LPSHeading");
+  let text = document.createTextNode("Longest Palindromic Substring : ");
+  h4.appendChild(text);
+  let input = document.createElement("input");
+  input.setAttribute("id", "hdb3LPSForm");
+  input.setAttribute("readonly", "true");
+  input.value = LPS_ManachersAlgo(labelArray);
+  divLPS.appendChild(h4);
+  divLPS.appendChild(input);
+  document.getElementById("putHdb3Canvas").appendChild(divLPS);
   let canvas = document.createElement("canvas");
   canvas.setAttribute("id", "hdb3Chart");
   document.getElementById("putHdb3Canvas").appendChild(canvas);

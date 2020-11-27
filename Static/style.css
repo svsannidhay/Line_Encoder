@@ -1469,6 +1469,30 @@ html{
   width: 1200px;
   background-color: #b49ee9;
 }
+.amiDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
+
+.amiLPSHeading {
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#amiLPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 
 
 /*//////////////////////////////////////////////////////////////////////*/
@@ -1651,7 +1675,31 @@ html{
   width: 90% !important;
   height: 400px !important;
 }
+.bezsDivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
 
+.bezsLPSHeading {
+  color: black;
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#bezsLPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
+}
 
 /*//////////////////////////////////////////////////////////////////////*/
 /*--------------------SECTION HDB3------------------------------------- */
@@ -1830,4 +1878,28 @@ html{
   height: 2px;
   width: 1200px;
   background-color: #b49ee9;
+}
+.hdb3DivLPS {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+}
+
+.hdb3LPSHeading {
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+#hdb3LPSForm {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 2px solid#af96e7;
 }
