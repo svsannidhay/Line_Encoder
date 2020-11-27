@@ -1,5 +1,19 @@
 $(document).ready(function(){
     /*------------------------------*/
+    /*-------Sticky  navigation-----*/
+    /*------------------------------*/
+    $('.js--nrz').waypoint(function(direction){
+        if(direction == 'down'){
+            $('nav').addClass('sticky');
+            $('header').removeClass('clipIt');
+        }else{
+            $('nav').removeClass('sticky');
+            $('header').addClass('clipIt');
+        }
+    },{
+        offset:'70px'
+    });
+    /*------------------------------*/
     /*------NRZI padding adder------*/
     /*------------------------------*/
     $(".js--wayPointNrzIButtons").click(function () {
@@ -18,10 +32,10 @@ $(document).ready(function(){
     /*-----Scroll on  navigation----*/
     /*------------------------------*/
     $(".js--scrollToNrz").click(function () {
-        $('html,body').animate({scrollTop:$('.js--nrz').offset().top},1000);
+        $("html,body").animate({ scrollTop: $(".js--nrz").offset().top }, 1000);
     });
     $(".js--scrollToNrzI").click(function () {
-        $("html,body").animate({ scrollTop: $(".js--nrzI").offset().top}, 1000);
+        $("html,body").animate({ scrollTop: $(".js--nrzI").offset().top }, 1000);
     });
     $(".js--scrollToNrzL").click(function () {
         $("html,body").animate({ scrollTop: $(".js--nrzL").offset().top }, 1000);

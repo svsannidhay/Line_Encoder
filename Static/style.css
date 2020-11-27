@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  padding:20px;
+  padding:10px;
 }
 html{
   background-color: #fff;
@@ -45,14 +45,14 @@ html{
 .header.clipIt{
   clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
 }
-/*NAVBAr*/
+/* main nav bar */
 .navMenu{
-  background-color: #b49ee9;
-
+  /* background-color: #b49ee9; */
+  opacity: 0.95;
 } 
 .navMenu ul{
   text-align: center;
-  padding:10px 10px;
+  padding:18px 10px 10px 10px;
   list-style: none;
 }
 .navMenu ul li{
@@ -61,6 +61,7 @@ html{
 }
 .navMenu ul li a:link,
 .navMenu ul li a:visited{
+  padding:0 8px 8px 8px;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -71,9 +72,31 @@ html{
 }
 .navMenu ul li a:hover,
 .navMenu ul li a:active {
-  color: #3500af;
   border-bottom: 2px solid #fff;
 }
+/* sticky navbar */
+
+.sticky{
+  position: fixed;
+  top:0; 
+  left:0;
+  width:100%;
+  background-color: rgba(253, 253, 253, 0.973);
+  box-shadow: 10px 0 10px #555;
+}
+.sticky .navMenu ul li a:link,
+.sticky .navMenu ul li a:visited {
+  padding:0 3px 8px 3px;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s, color 0.3s;
+}
+
+.sticky .navMenu ul li a:hover,
+.sticky .navMenu ul li a:active {
+  border-bottom: 2px solid #3500af;
+}
+
 /*MAIN HEADING*/
 .headerHeading{
   position: absolute;
