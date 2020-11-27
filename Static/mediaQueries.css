@@ -57,6 +57,17 @@
 @media only screen and (max-width:1023px) {
   html {font-size: 16px;}
   #nrzIChart,
+  .navMenu{
+    background-color: #b49ee9;
+    box-shadow: 2px 2px 2px #555;
+  }
+  .sticky .navMenu{
+    background-color: rgba(253, 253, 253, 0.973);
+    box-shadow: 0 0 0 ;
+  }
+  .sticky .navMenu{
+    
+  }
   #nrzChart {
     height:320px !important;
   }
