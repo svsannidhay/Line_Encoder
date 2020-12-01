@@ -67,7 +67,7 @@ function LPS_ManachersAlgo(s){
     if(r>i){
       p[i] = min(r-i,p[iMirror]);
     }
-    while(str[i+1+p[i]]==str[i-1-p[i]]){
+    while(i+1+p[i]<str.length&&str[i+1+p[i]]==str[i-1-p[i]]){
       p[i]++;
     }
     if(i+p[i]>r){
@@ -85,7 +85,7 @@ function LPS_ManachersAlgo(s){
   let ans = [];
   let index = 0;
   for(let i=cIndex-p[cIndex];i<=(cIndex+p[cIndex]);i++){
-    if(str[i]!='#'){
+    if(i<str.length&&str[i]!='#'){
       ans[index] = str[i];
       index++;
     }
@@ -1259,6 +1259,7 @@ function hdb3Encoder(arr){
     if(arr[i]==0){
       count4++;
       if(count4==4){
+        console.log("testing");
         if(prevState==-2){
           hdb3[i-3] = 1;
           prevState = 1;
